@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "title": "SPC flooring for developments. Wholesale quote in 24 h",
+    "description": "SPC flooring importer for developers, contractors and design studios. A wholesale quote for your project within 24 hours and a sample presentation on site."
+  },
+  "nav": {
+    "skipToContent": "Skip to content",
+    "home": "Home",
+    "main": "Main menu",
+    "products": "Products",
+    "gallery": "Gallery",
+    "decors": "Decors",
+    "architects": "For architects",
+    "process": "How we work",
+    "cta": "Request a quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Import and Project Deliveries of SPC Flooring Directly from the Factory",
+    "lead": "Modern vinyl flooring and large-format SPC wall panels for developers, contractors and investors across Poland.",
+    "ctaQuote": "Request a Project Quote",
+    "ctaMeeting": "Book a Sample Presentation",
+    "facts": {
+      "batch": {
+        "title": "Single-Batch Guarantee",
+        "text": "100% colour consistency across the entire project"
+      },
+      "docs": {
+        "title": "Full EU Documentation",
+        "text": "CE certificates, DoP, hygiene certificates"
+      },
+      "delivery": {
+        "title": "Delivery to Site",
+        "text": "Lead time of 3–5 weeks, directly to the address you specify"
+      }
+    },
+    "imageAlt": "Corridor with a wooden floor and a concrete wall in warm light"
+  },
+  "catalog": {
+    "title": "Choose the Right Solution for Your Project",
+    "lead": "We offer flexible project delivery terms for two main product categories:",
+    "layersTitle": "Layers from the top",
+    "specsTitle": "Specifications",
+    "gallery": "Photos and decors",
+    "sceneLabel": "Interior view",
+    "cta": "Ask About Availability and B2B Pricing",
+    "products": {
+      "floors": {
+        "name": "SPC Flooring",
+        "variant": "Wood Look – Click System",
+        "description": "Rigid SPC planks with a locking system for fast, secure installation.",
+        "sceneAlt": "Living room with a light oak SPC floor",
+        "swatchPrefix": "Collection",
+        "layers": {
+          "uv": {
+            "name": "Ultimate Shield coating",
+            "text": "Protects against scratches and stains"
+          },
+          "wear": {
+            "name": "0.55 mm wear layer",
+            "text": "Transparent, commercial grade"
+          },
+          "decor": {
+            "name": "Digital Ultra HD wood decor",
+            "text": "Embossed wood grain texture"
+          },
+          "core": {
+            "name": "2000 kg/m³ SPC core",
+            "text": "Rigid, stable and waterproof"
+          },
+          "underlay": {
+            "name": "1.0 or 1.5 mm IXPE underlay",
+            "text": "Built in, dampens footsteps"
+          }
+        },
+        "specs": {
+          "thickness": {
+            "label": "Thickness",
+            "value": "4.0 mm – 7.0 mm (depending on the collection)"
+          },
+          "wearLayer": {
+            "label": "Wear layer",
+            "value": "0.55 mm (commercial grade)"
+          },
+          "underlay": {
+            "label": "Underlay",
+            "value": "Built-in IXPE acoustic underlay"
+          },
+          "installation": {
+            "label": "Installation",
+            "value": "Glueless Click locking system"
+          },
+          "sizes": {
+            "label": "Plank sizes",
+            "value": "181 × 1219 mm, 229 × 1219 mm, 229 × 1524 mm"
+          },
+          "edges": {
+            "label": "Edges",
+            "value": "Micro bevel"
+          },
+          "core": {
+            "label": "Core",
+            "value": "Endurance Tech SPC, 2000 kg/m³ density"
+          },
+          "locking": {
+            "label": "Locking systems",
+            "value": "I4F, Uniclic"
+          },
+          "pack": {
+            "label": "Packaging",
+            "value": "10 pcs / 2.21 m², 55 cartons per pallet (121.6 m²)"
+          },
+          "warranty": {
+            "label": "Warranty",
+            "value": "Lifetime residential, 7–10 years light commercial"
+          }
+        },
+        "collections": "We will show all 7 collections at the sample presentation."
+      },
+      "panels": {
+        "name": "Large-Format SPC Panels",
+        "variant": "Stone / Concrete / Marble Look",
+        "description": "The depth of natural stone in a waterproof SPC panel with a click lock.",
+        "sceneAlt": "Living room with a marble-look floor and wall made of large-format SPC panels",
+        "swatchPrefix": "Decor",
+        "layers": {
+          "uv": {
+            "name": "Ultimate Shield coating",
+            "text": "Protects against scratches and stains"
+          },
+          "wear": {
+            "name": "0.55 / 0.30 mm wear layer",
+            "text": "Transparent protective layer"
+          },
+          "decor": {
+            "name": "Digital Ultra HD stone decor",
+            "text": "Stone, concrete or marble"
+          },
+          "core": {
+            "name": "2000 kg/m³ SPC core",
+            "text": "Resists impact and water"
+          },
+          "underlay": {
+            "name": "1.0 or 1.5 mm IXPE underlay",
+            "text": "Dampens sound, evens out the subfloor"
+          }
+        },
+        "specs": {
+          "application": {
+            "label": "Application",
+            "value": "Floors and large-format wall cladding"
+          },
+          "properties": {
+            "label": "Properties",
+            "value": "100% waterproof, high impact resistance"
+          },
+          "formats": {
+            "label": "Formats",
+            "value": "Large-format panels"
+          },
+          "size": {
+            "label": "Panel size",
+            "value": "305 × 915 mm"
+          },
+          "thickness": {
+            "label": "Thickness",
+            "value": "5 mm or 7 mm (incl. 1.0 / 1.5 mm IXPE underlay)"
+          },
+          "wearLayer": {
+            "label": "Wear layer",
+            "value": "0.55 mm or 0.30 mm"
+          },
+          "surface": {
+            "label": "Surface",
+            "value": "Stone texture, lightly embossed"
+          },
+          "edges": {
+            "label": "Edges",
+            "value": "Micro bevel"
+          },
+          "locking": {
+            "label": "Locking systems",
+            "value": "I4F, Uniclic"
+          },
+          "pack": {
+            "label": "Packaging",
+            "value": "8 pcs / 2.23 m², 52 boxes per pallet"
+          },
+          "certificate": {
+            "label": "Certification",
+            "value": "Intertek Clean Air Gold"
+          },
+          "warranty": {
+            "label": "Warranty",
+            "value": "Lifetime residential, 7–10 years light commercial"
+          }
+        },
+        "collections": "4 of 14 designs. We will bring the rest to the sample presentation."
+      }
+    }
+  },
+  "factory": {
+    "title": "Why Order Directly from the Factory?",
+    "items": {
+      "batch": {
+        "title": "No Risk of Shade Differences (Co-lot Match)",
+        "text": "When you order material for the whole project (e.g. 500–5000 m²), you receive goods from a single production run. We eliminate colour differences between packs."
+      },
+      "price": {
+        "title": "Cost Optimisation (Factory Price)",
+        "text": "You skip intermediary margins and warehousing costs in Poland. You get state-of-the-art SPC material at an unbeatable wholesale price."
+      },
+      "delivery": {
+        "title": "Delivery Straight to the Construction Site",
+        "text": "We arrange dedicated transport (FTL/LTL) directly from the factory to your project in any city in Poland."
+      }
+    }
+  },
+  "gallery": {
+    "title": "See Our Products in Finished Interiors",
+    "lead": "See how SPC panels look in residential developments, offices and commercial spaces.",
+    "open": "Enlarge photo: {title}",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "counter": "{current} of {total}",
+    "categories": {
+      "residential": "Residential",
+      "office": "Office",
+      "commercial": "Commercial"
+    },
+    "items": {
+      "livingGreyOak": {
+        "title": "Living room",
+        "alt": "Living room with a grey oak SPC floor and a marble wall"
+      },
+      "officeOpenSpace": {
+        "title": "Open-plan office",
+        "alt": "Bright open-plan office with a herringbone floor"
+      },
+      "bathroomMarble": {
+        "title": "Bathroom",
+        "alt": "Bathroom with walls of large-format marble-look SPC panels"
+      },
+      "kitchenDining": {
+        "title": "Kitchen and dining room",
+        "alt": "Kitchen and dining room with a graphite SPC floor"
+      },
+      "showroom": {
+        "title": "Furniture showroom",
+        "alt": "Showroom with furniture on a light floor"
+      },
+      "livingLightGrey": {
+        "title": "Living room with large windows",
+        "alt": "Spacious living room with a light grey SPC floor"
+      },
+      "officeMeetingRoom": {
+        "title": "Meeting room",
+        "alt": "Meeting room with a light wooden floor"
+      },
+      "livingDarkOak": {
+        "title": "Living room",
+        "alt": "Living room with a dark oak SPC floor"
+      }
+    }
+  },
+  "decors": {
+    "title": "Decors",
+    "lead": "Selected patterns from the collection. We will show the full sample set at a meeting, on site or at your office.",
+    "cta": "Book a sample presentation"
+  },
+  "architects": {
+    "title": "Architect and Interior Designer Zone",
+    "lead": "Looking for a reliable material for commercial or private projects? Join our partner programme.",
+    "items": {
+      "commission": "<b>Attractive commission terms</b> for recommending our products.",
+      "support": "<b>Full technical support:</b> Technical Data Sheets (TDS), Declarations of Performance (DoP), hygiene certificates.",
+      "presentation": "<b>Personal sample presentation:</b> We will come to a meeting with you or your client and present physical decor samples."
+    },
+    "cta": "Contact Us About B2B Partnership"
+  },
+  "process": {
+    "title": "How we work together",
+    "steps": {
+      "inquiry": {
+        "title": "Inquiry",
+        "text": "Fill in the form or call us. The floor area and project type are enough."
+      },
+      "offer": {
+        "title": "Offer within 24 hours",
+        "text": "We prepare a wholesale quote for your floor area and schedule."
+      },
+      "presentation": {
+        "title": "Sample presentation",
+        "text": "We bring samples to your site or office and help you choose decors."
+      },
+      "delivery": {
+        "title": "Delivery",
+        "text": "Transport to the construction site on agreed dates and in agreed quantities."
+      }
+    }
+  },
+  "form": {
+    "title": "Request a Project Quote or Book a Meeting",
+    "lead": "Fill in the form. We will send you a tailored price offer within 24 hours.",
+    "directContact": "Prefer to call or write?",
+    "required": "required",
+    "fields": {
+      "name": {
+        "label": "Full Name / Company Name"
+      },
+      "phone": {
+        "label": "Phone number",
+        "placeholder": "+48 600 000 000"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "john@company.com"
+      },
+      "investmentType": {
+        "label": "Project Type",
+        "placeholder": "Select",
+        "options": {
+          "developer": "Developer",
+          "contractor": "Contractor",
+          "designOffice": "Design Studio",
+          "privateInvestor": "Private Investor",
+          "other": "Other"
+        }
+      },
+      "investmentTypeOther": {
+        "label": "Which project type?"
+      },
+      "area": {
+        "label": "Estimated area in m²",
+        "placeholder": "e.g. 500 m²"
+      },
+      "interests": {
+        "legend": "What are you interested in?",
+        "options": {
+          "wholesaleQuote": "Wholesale quote for the project",
+          "samplePresentation": "Meeting and live sample presentation",
+          "technicalDocs": "Complete technical documentation (PDF)"
+        }
+      },
+      "message": {
+        "label": "Message / Additional notes"
+      },
+      "consent": {
+        "label": "I consent to the processing of my personal data for the purpose of preparing and sending a commercial offer. <link>Privacy Policy</link>."
+      },
+      "website": {
+        "label": "Leave this field empty"
+      }
+    },
+    "submit": "Send B2B Inquiry",
+    "submitting": "Sending…",
+    "errors": {
+      "nameTooLong": "Enter no more than 120 characters.",
+      "phoneRequired": "Enter your phone number.",
+      "phoneInvalid": "Enter a phone number with 9–15 digits, e.g. +48 600 000 000.",
+      "emailRequired": "Enter your email address.",
+      "emailInvalid": "Enter an email address like john@company.com.",
+      "otherRequired": "Enter the project type.",
+      "otherTooLong": "Enter no more than 120 characters.",
+      "areaInvalid": "Enter the floor area in square metres, e.g. 500.",
+      "messageTooLong": "The message can be up to 2000 characters long.",
+      "consentRequired": "Tick the consent so we can contact you."
+    },
+    "success": {
+      "title": "Inquiry sent",
+      "text": "We will send the offer to {email} within 24 hours.",
+      "again": "Send another inquiry"
+    },
+    "failure": {
+      "send": "The inquiry could not be sent. Try again or contact us directly: {email}, {phone}.",
+      "tooFast": "The form was sent too quickly. Check your details and send it again.",
+      "validation": "Check the highlighted fields and send the form again."
+    }
+  },
+  "presentation": {
+    "title": "Planning a Project Over 200 m²?",
+    "lead": "Book a free sample presentation at your office or on your construction site.",
+    "close": "Close",
+    "fields": {
+      "name": {
+        "label": "First name"
+      },
+      "phone": {
+        "label": "Phone number",
+        "placeholder": "+48 600 000 000"
+      },
+      "consent": {
+        "label": "I consent to the processing of my personal data for the purpose of arranging a sample presentation. <link>Privacy Policy</link>."
+      }
+    },
+    "submit": "Book the Presentation",
+    "success": {
+      "title": "Thank you",
+      "text": "We will call you at {phone} to agree on the date and place of the presentation.",
+      "close": "Close"
+    }
+  },
+  "footer": {
+    "contact": "Contact",
+    "company": "Company details",
+    "court": "Registry court",
+    "shareCapital": "Share capital",
+    "privacy": "Privacy Policy",
+    "rights": "© {year} {name}. All rights reserved."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: {date}",
+    "back": "Back to the home page",
+    "sections": {
+      "controller": {
+        "title": "Data controller",
+        "text": "The controller of your personal data is {legalName}, {address}, KRS {krs}, NIP {nip}. For matters concerning personal data, write to {email}."
+      },
+      "purpose": {
+        "title": "Purpose and legal basis",
+        "text": "We process the data from the forms to prepare and send a commercial offer, arrange a sample presentation and answer your inquiry (Art. 6(1)(a) and (b) GDPR), and to establish, pursue or defend claims (Art. 6(1)(f) GDPR)."
+      },
+      "scope": {
+        "title": "Scope of data",
+        "text": "Your full name or company name, phone number, email address and the project details you provide in the form."
+      },
+      "recipients": {
+        "title": "Recipients",
+        "text": "The data may be received by the IT service providers we use for website hosting and email delivery. If a provider processes data outside the European Economic Area, this is based on standard contractual clauses approved by the European Commission."
+      },
+      "retention": {
+        "title": "Retention period",
+        "text": "We keep the data until you withdraw your consent or for as long as needed to prepare the offer and conduct business talks, and then for the limitation period of any claims."
+      },
+      "rights": {
+        "title": "Your rights",
+        "text": "You have the right to access, rectify and erase your data, to restrict processing, to data portability, to object, and to withdraw consent at any time without affecting the lawfulness of earlier processing. You may lodge a complaint with the President of the Personal Data Protection Office (UODO)."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "text": "The website does not use cookies."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The address may have changed. Go back to the home page and request a quote.",
+    "back": "Back to the home page"
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "title": "Panele SPC dla inwestycji. Wycena hurtowa w 24 h",
+    "description": "Importer podłóg SPC dla deweloperów, wykonawców i biur projektowych. Wycena hurtowa na obiekt w 24 godziny i prezentacja wzorników na miejscu inwestycji."
+  },
+  "nav": {
+    "skipToContent": "Przejdź do treści",
+    "home": "Strona główna",
+    "main": "Menu główne",
+    "products": "Produkty",
+    "gallery": "Galeria",
+    "decors": "Dekory",
+    "architects": "Strefa Architekta",
+    "process": "Współpraca",
+    "cta": "Zapytaj o wycenę",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "language": "Język"
+  },
+  "hero": {
+    "title": "Import i Dostawy Obiektowe Podłóg SPC Bezpośrednio z Fabryki",
+    "lead": "Nowoczesne winylowe podłogi oraz wielkoformatowe panele ścienne SPC dla deweloperów, wykonawców i inwestorów w całej Polsce.",
+    "ctaQuote": "Poproś o Wycenę Inwestycyjną",
+    "ctaMeeting": "Umów Prezentację Wzorników",
+    "facts": {
+      "batch": {
+        "title": "Gwarancja Jednolitej Partii",
+        "text": "100% spójności koloru na całym obiekcie"
+      },
+      "docs": {
+        "title": "Pełna Dokumentacja UE",
+        "text": "Certyfikaty CE, DoP, Atesty Higieniczne"
+      },
+      "delivery": {
+        "title": "Dostawa na Budowę",
+        "text": "Czas realizacji 3–5 tygodni bezpośrednio pod wskazany adres"
+      }
+    },
+    "imageAlt": "Korytarz z drewnianą podłogą i betonową ścianą w ciepłym świetle"
+  },
+  "catalog": {
+    "title": "Wybierz Rozwiązanie dla Twojej Inwestycji",
+    "lead": "Oferujemy elastyczne warunki dostaw obiektowych dla dwóch głównych kategorii produktów:",
+    "layersTitle": "Warstwy od góry",
+    "specsTitle": "Specyfikacja",
+    "gallery": "Zdjęcia i dekory",
+    "sceneLabel": "Aranżacja wnętrza",
+    "cta": "Zapytaj o Dostępność i Cennik B2B",
+    "products": {
+      "floors": {
+        "name": "Podłogi SPC",
+        "variant": "Wzór Drewna – Click System",
+        "description": "Sztywne panele SPC z systemem zamków do szybkiego i pewnego montażu.",
+        "sceneAlt": "Salon z podłogą SPC w odcieniu jasnego dębu",
+        "swatchPrefix": "Kolekcja",
+        "layers": {
+          "uv": {
+            "name": "Powłoka Ultimate Shield",
+            "text": "Ochrona przed zarysowaniami i plamami"
+          },
+          "wear": {
+            "name": "Warstwa ścieralna 0,55 mm",
+            "text": "Przezroczysta, klasa obiektowa"
+          },
+          "decor": {
+            "name": "Dekor drewna Digital Ultra HD",
+            "text": "Tłoczona faktura słojów drewna"
+          },
+          "core": {
+            "name": "Rdzeń SPC 2000 kg/m³",
+            "text": "Sztywny, stabilny i wodoodporny"
+          },
+          "underlay": {
+            "name": "Podkład IXPE 1,0 lub 1,5 mm",
+            "text": "Wbudowany, wycisza kroki"
+          }
+        },
+        "specs": {
+          "thickness": {
+            "label": "Grubość",
+            "value": "4,0 mm – 7,0 mm (zależnie od kolekcji)"
+          },
+          "wearLayer": {
+            "label": "Warstwa ścieralna",
+            "value": "0,55 mm (klasa obiektowa)"
+          },
+          "underlay": {
+            "label": "Podkład",
+            "value": "Wbudowany podkład wyciszający IXPE"
+          },
+          "installation": {
+            "label": "Montaż",
+            "value": "Bezklejowy system zamków Click"
+          },
+          "sizes": {
+            "label": "Wymiary desek",
+            "value": "181 × 1219 mm, 229 × 1219 mm, 229 × 1524 mm"
+          },
+          "edges": {
+            "label": "Krawędzie",
+            "value": "Mikrofaza"
+          },
+          "core": {
+            "label": "Rdzeń",
+            "value": "SPC Endurance Tech, gęstość 2000 kg/m³"
+          },
+          "locking": {
+            "label": "Systemy zamków",
+            "value": "I4F, Uniclic"
+          },
+          "pack": {
+            "label": "Opakowanie",
+            "value": "10 szt. / 2,21 m², 55 kartonów na palecie (121,6 m²)"
+          },
+          "warranty": {
+            "label": "Gwarancja",
+            "value": "Dożywotnia w mieszkaniach, 7–10 lat przy lekkim ruchu komercyjnym"
+          }
+        },
+        "collections": "Wszystkie 7 kolekcji pokażemy na prezentacji wzorników."
+      },
+      "panels": {
+        "name": "Wielkoformatowe Panele SPC",
+        "variant": "Wzór Kamienia / Betonu / Marmuru",
+        "description": "Głębia naturalnego kamienia w wodoodpornej płycie SPC z zamkiem click.",
+        "sceneAlt": "Salon z podłogą i ścianą z wielkoformatowych paneli SPC we wzorze marmuru",
+        "swatchPrefix": "Dekor",
+        "layers": {
+          "uv": {
+            "name": "Powłoka Ultimate Shield",
+            "text": "Ochrona przed zarysowaniami i plamami"
+          },
+          "wear": {
+            "name": "Warstwa ścieralna 0,55 / 0,30 mm",
+            "text": "Przezroczysta warstwa ochronna"
+          },
+          "decor": {
+            "name": "Dekor kamienia Digital Ultra HD",
+            "text": "Kamień, beton lub marmur"
+          },
+          "core": {
+            "name": "Rdzeń SPC 2000 kg/m³",
+            "text": "Odporny na uderzenia i wodę"
+          },
+          "underlay": {
+            "name": "Podkład IXPE 1,0 lub 1,5 mm",
+            "text": "Wycisza i wyrównuje podłoże"
+          }
+        },
+        "specs": {
+          "application": {
+            "label": "Zastosowanie",
+            "value": "Podłogi oraz wielkoformatowe okładziny ścienne"
+          },
+          "properties": {
+            "label": "Właściwości",
+            "value": "100% Wodoodporność, wysoka odporność na uderzenia"
+          },
+          "formats": {
+            "label": "Formaty",
+            "value": "Płyty wielkoformatowe"
+          },
+          "size": {
+            "label": "Wymiary płyty",
+            "value": "305 × 915 mm"
+          },
+          "thickness": {
+            "label": "Grubość",
+            "value": "5 mm lub 7 mm (z podkładem IXPE 1,0 / 1,5 mm)"
+          },
+          "wearLayer": {
+            "label": "Warstwa ścieralna",
+            "value": "0,55 mm lub 0,30 mm"
+          },
+          "surface": {
+            "label": "Powierzchnia",
+            "value": "Struktura kamienia, lekko tłoczona"
+          },
+          "edges": {
+            "label": "Krawędzie",
+            "value": "Mikrofaza"
+          },
+          "locking": {
+            "label": "Systemy zamków",
+            "value": "I4F, Uniclic"
+          },
+          "pack": {
+            "label": "Opakowanie",
+            "value": "8 szt. / 2,23 m², 52 kartony na palecie"
+          },
+          "certificate": {
+            "label": "Certyfikat",
+            "value": "Intertek Clean Air Gold"
+          },
+          "warranty": {
+            "label": "Gwarancja",
+            "value": "Dożywotnia w mieszkaniach, 7–10 lat przy lekkim ruchu komercyjnym"
+          }
+        },
+        "collections": "4 z 14 wzorów. Pozostałe pokażemy na prezentacji wzorników."
+      }
+    }
+  },
+  "factory": {
+    "title": "Dlaczego Warto Zamawiać Bezpośrednio z Fabryki?",
+    "items": {
+      "batch": {
+        "title": "Brak Ryzyka Różnicy Odcieni (Co-lot Match)",
+        "text": "Zamawiając materiał na cały obiekt (np. 500–5000 m²), otrzymujesz towar z jednej serii produkcyjnej. Eliminujemy problem odbarwień między paczkami."
+      },
+      "price": {
+        "title": "Optymalizacja Kosztów (Cena Fabryczna)",
+        "text": "Omijasz marże pośredników i koszty magazynowania w Polsce. Otrzymujesz najnowocześniejszy materiał SPC w bezkonkurencyjnej cenie hurtowej."
+      },
+      "delivery": {
+        "title": "Dostawa Prosto na Plac Budowy",
+        "text": "Organizujemy transport dedykowany (FTL/LTL) bezpośrednio z fabryki do Twojego obiektu w dowolnym mieście w Polsce."
+      }
+    }
+  },
+  "gallery": {
+    "title": "Zobacz Nasze Produkty w Gotowych Wnętrzach",
+    "lead": "Sprawdź, jak panele SPC prezentują się w inwestycjach mieszkaniowych, biurach oraz obiektach komercyjnych.",
+    "open": "Powiększ zdjęcie: {title}",
+    "close": "Zamknij",
+    "previous": "Poprzednie zdjęcie",
+    "next": "Następne zdjęcie",
+    "counter": "{current} z {total}",
+    "categories": {
+      "residential": "Mieszkanie",
+      "office": "Biuro",
+      "commercial": "Obiekt komercyjny"
+    },
+    "items": {
+      "livingGreyOak": {
+        "title": "Salon",
+        "alt": "Salon z podłogą SPC w odcieniu szarego dębu i marmurową ścianą"
+      },
+      "officeOpenSpace": {
+        "title": "Open space",
+        "alt": "Jasne biuro typu open space z podłogą w jodełkę"
+      },
+      "bathroomMarble": {
+        "title": "Łazienka",
+        "alt": "Łazienka ze ścianami z wielkoformatowych paneli SPC we wzorze marmuru"
+      },
+      "kitchenDining": {
+        "title": "Kuchnia z jadalnią",
+        "alt": "Kuchnia z jadalnią i podłogą SPC w odcieniu grafitu"
+      },
+      "showroom": {
+        "title": "Salon meblowy",
+        "alt": "Salon wystawowy z meblami na jasnej podłodze"
+      },
+      "livingLightGrey": {
+        "title": "Salon z dużymi oknami",
+        "alt": "Przestronny salon z jasnoszarą podłogą SPC"
+      },
+      "officeMeetingRoom": {
+        "title": "Sala konferencyjna",
+        "alt": "Sala konferencyjna z jasną drewnianą podłogą"
+      },
+      "livingDarkOak": {
+        "title": "Salon",
+        "alt": "Salon z podłogą SPC w odcieniu ciemnego dębu"
+      }
+    }
+  },
+  "decors": {
+    "title": "Dekory",
+    "lead": "Wybrane wzory z kolekcji. Pełny wzornik pokażemy na spotkaniu, na budowie lub w Twoim biurze.",
+    "cta": "Umów prezentację wzorników"
+  },
+  "architects": {
+    "title": "Strefa Architekta i Projektanta Wnętrz",
+    "lead": "Szukasz niezawodnego materiału do projektów komercyjnych lub prywatnych? Dołącz do naszego programu partnerskiego.",
+    "items": {
+      "commission": "<b>Atrakcyjne warunki prowizyjne</b> za polecenie naszych produktów.",
+      "support": "<b>Pełne wsparcie techniczne:</b> Karty Techniczne (TDS), Deklaracje Właściwości Użytkowych (DoP), atesty higieniczne.",
+      "presentation": "<b>Osobista prezentacja wzorników:</b> Przyjedziemy na spotkanie z Tobą lub Twoim klientem i zaprezentujemy fizyczne próbki dekorów."
+    },
+    "cta": "Skontaktuj się w Sprawie Współpracy B2B"
+  },
+  "process": {
+    "title": "Jak wygląda współpraca",
+    "steps": {
+      "inquiry": {
+        "title": "Zapytanie",
+        "text": "Wypełniasz formularz albo dzwonisz. Wystarczy metraż i typ inwestycji."
+      },
+      "offer": {
+        "title": "Oferta w 24 godziny",
+        "text": "Przygotowujemy wycenę hurtową dla Twojego metrażu i terminu."
+      },
+      "presentation": {
+        "title": "Prezentacja wzorników",
+        "text": "Przyjeżdżamy z próbkami na budowę lub do biura i dobieramy dekory."
+      },
+      "delivery": {
+        "title": "Dostawa",
+        "text": "Transport na plac budowy w ustalonych terminach i ilościach."
+      }
+    }
+  },
+  "form": {
+    "title": "Zapytaj o Wycenę Inwestycyjną lub Umów Spotkanie",
+    "lead": "Wypełnij formularz. Prześlemy dedykowaną ofertę cenową w ciągu 24 godzin.",
+    "directContact": "Wolisz zadzwonić lub napisać?",
+    "required": "wymagane",
+    "fields": {
+      "name": {
+        "label": "Imię i Nazwisko / Nazwa Firmy"
+      },
+      "phone": {
+        "label": "Numer telefonu",
+        "placeholder": "+48 600 000 000"
+      },
+      "email": {
+        "label": "Adres e-mail",
+        "placeholder": "jan@firma.pl"
+      },
+      "investmentType": {
+        "label": "Typ Inwestycji",
+        "placeholder": "Wybierz",
+        "options": {
+          "developer": "Deweloper",
+          "contractor": "Wykonawca",
+          "designOffice": "Biuro Projektowe",
+          "privateInvestor": "Inwestor Prywatny",
+          "other": "Inne"
+        }
+      },
+      "investmentTypeOther": {
+        "label": "Jaki typ inwestycji?"
+      },
+      "area": {
+        "label": "Szacowana ilość m²",
+        "placeholder": "np. 500 m²"
+      },
+      "interests": {
+        "legend": "Czym jesteś zainteresowany?",
+        "options": {
+          "wholesaleQuote": "Wycena hurtowa na obiekt",
+          "samplePresentation": "Spotkanie i prezentacja wzorników na żywo",
+          "technicalDocs": "Otrzymanie kompletnej dokumentacji technicznej (PDF)"
+        }
+      },
+      "message": {
+        "label": "Wiadomość / Dodatkowe uwagi"
+      },
+      "consent": {
+        "label": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przygotowania i przesłania oferty handlowej. <link>Polityka Prywatności</link>."
+      },
+      "website": {
+        "label": "Nie wypełniaj tego pola"
+      }
+    },
+    "submit": "Wyślij Zapytanie B2B",
+    "submitting": "Wysyłanie…",
+    "errors": {
+      "nameTooLong": "Wpisz maksymalnie 120 znaków.",
+      "phoneRequired": "Podaj numer telefonu.",
+      "phoneInvalid": "Podaj numer telefonu z 9–15 cyframi, np. +48 600 000 000.",
+      "emailRequired": "Podaj adres e-mail.",
+      "emailInvalid": "Podaj adres e-mail w formacie jan@firma.pl.",
+      "otherRequired": "Wpisz typ inwestycji.",
+      "otherTooLong": "Wpisz maksymalnie 120 znaków.",
+      "areaInvalid": "Podaj liczbę metrów kwadratowych, np. 500.",
+      "messageTooLong": "Wiadomość może mieć maksymalnie 2000 znaków.",
+      "consentRequired": "Zaznacz zgodę, abyśmy mogli się z Tobą skontaktować."
+    },
+    "success": {
+      "title": "Zapytanie wysłane",
+      "text": "Ofertę prześlemy na adres {email} w ciągu 24 godzin.",
+      "again": "Wyślij kolejne zapytanie"
+    },
+    "failure": {
+      "send": "Nie udało się wysłać zapytania. Spróbuj ponownie albo skontaktuj się z nami bezpośrednio: {email}, {phone}.",
+      "tooFast": "Formularz został wysłany zbyt szybko. Sprawdź dane i wyślij go ponownie.",
+      "validation": "Sprawdź zaznaczone pola i wyślij formularz ponownie."
+    }
+  },
+  "presentation": {
+    "title": "Planujesz Inwestycję Powyżej 200 m²?",
+    "lead": "Umów się na bezpłatną prezentację wzorników w Twoim biurze lub na placu budowy.",
+    "close": "Zamknij",
+    "fields": {
+      "name": {
+        "label": "Imię"
+      },
+      "phone": {
+        "label": "Numer telefonu",
+        "placeholder": "+48 600 000 000"
+      },
+      "consent": {
+        "label": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu umówienia prezentacji wzorników. <link>Polityka Prywatności</link>."
+      }
+    },
+    "submit": "Zamów Prezentację",
+    "success": {
+      "title": "Dziękujemy",
+      "text": "Zadzwonimy na numer {phone}, aby ustalić termin i miejsce prezentacji.",
+      "close": "Zamknij"
+    }
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "company": "Dane firmy",
+    "court": "Sąd rejestrowy",
+    "shareCapital": "Kapitał zakładowy",
+    "privacy": "Polityka Prywatności",
+    "rights": "© {year} {name}. Wszelkie prawa zastrzeżone."
+  },
+  "privacy": {
+    "title": "Polityka Prywatności",
+    "updated": "Ostatnia aktualizacja: {date}",
+    "back": "Wróć na stronę główną",
+    "sections": {
+      "controller": {
+        "title": "Administrator danych",
+        "text": "Administratorem Twoich danych osobowych jest {legalName}, {address}, KRS {krs}, NIP {nip}. W sprawach danych osobowych napisz na {email}."
+      },
+      "purpose": {
+        "title": "Cel i podstawa przetwarzania",
+        "text": "Dane z formularzy przetwarzamy, aby przygotować i przesłać ofertę handlową, umówić prezentację wzorników oraz odpowiedzieć na zapytanie (art. 6 ust. 1 lit. a i b RODO), a także w celu ustalenia, dochodzenia lub obrony roszczeń (art. 6 ust. 1 lit. f RODO)."
+      },
+      "scope": {
+        "title": "Zakres danych",
+        "text": "Imię i nazwisko lub nazwa firmy, numer telefonu, adres e-mail oraz informacje o inwestycji, które podasz w formularzu."
+      },
+      "recipients": {
+        "title": "Odbiorcy danych",
+        "text": "Dane mogą otrzymać dostawcy usług IT, z których korzystamy: hostingu strony i wysyłki wiadomości e-mail. Jeśli dostawca przetwarza dane poza Europejskim Obszarem Gospodarczym, odbywa się to na podstawie standardowych klauzul umownych zatwierdzonych przez Komisję Europejską."
+      },
+      "retention": {
+        "title": "Okres przechowywania",
+        "text": "Dane przechowujemy do czasu wycofania zgody albo przez okres potrzebny do przygotowania oferty i prowadzenia rozmów handlowych, a następnie przez okres przedawnienia ewentualnych roszczeń."
+      },
+      "rights": {
+        "title": "Twoje prawa",
+        "text": "Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i przenoszenia, prawo sprzeciwu oraz prawo wycofania zgody w dowolnym momencie bez wpływu na zgodność z prawem wcześniejszego przetwarzania. Możesz złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych."
+      },
+      "cookies": {
+        "title": "Pliki cookies",
+        "text": "Strona nie używa plików cookies."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Nie ma takiej strony",
+    "text": "Adres mógł się zmienić. Wróć na stronę główną i zapytaj o wycenę.",
+    "back": "Wróć na stronę główną"
+  }
+}
