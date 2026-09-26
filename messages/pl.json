@@ -221,11 +221,6 @@
   "gallery": {
     "title": "Zobacz Nasze Produkty w Gotowych Wnętrzach",
     "lead": "Sprawdź, jak panele SPC prezentują się w inwestycjach mieszkaniowych, biurach oraz obiektach komercyjnych.",
-    "open": "Powiększ zdjęcie: {title}",
-    "close": "Zamknij",
-    "previous": "Poprzednie zdjęcie",
-    "next": "Następne zdjęcie",
-    "counter": "{current} z {total}",
     "categories": {
       "residential": "Mieszkanie",
       "office": "Biuro",
@@ -265,6 +260,15 @@
         "alt": "Salon z podłogą SPC w odcieniu ciemnego dębu"
       }
     }
+  },
+  "lightbox": {
+    "label": "Podgląd zdjęć",
+    "open": "Powiększ zdjęcie: {title}",
+    "close": "Zamknij",
+    "previous": "Poprzednie zdjęcie",
+    "next": "Następne zdjęcie",
+    "counter": "{current} z {total}",
+    "thumbnails": "Miniatury zdjęć"
   },
   "decors": {
     "title": "Dekory",

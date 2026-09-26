@@ -221,11 +221,6 @@
   "gallery": {
     "title": "See Our Products in Finished Interiors",
     "lead": "See how SPC panels look in residential developments, offices and commercial spaces.",
-    "open": "Enlarge photo: {title}",
-    "close": "Close",
-    "previous": "Previous photo",
-    "next": "Next photo",
-    "counter": "{current} of {total}",
     "categories": {
       "residential": "Residential",
       "office": "Office",
@@ -265,6 +260,15 @@
         "alt": "Living room with a dark oak SPC floor"
       }
     }
+  },
+  "lightbox": {
+    "label": "Photo viewer",
+    "open": "Enlarge photo: {title}",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "counter": "{current} of {total}",
+    "thumbnails": "Photo thumbnails"
   },
   "decors": {
     "title": "Decors",

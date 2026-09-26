@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import Image, { type StaticImageData } from "next/image";
+import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "motion/react";
+import { Maximize2 } from "lucide-react";
 import type { Swatch } from "@/content/images";
+import { Lightbox, type LightboxSlide } from "@/components/ui/Lightbox";
 
 type ProductGalleryProps = {
   /** Accessible name of the thumbnail group. */
@@ -15,15 +18,21 @@ type ProductGalleryProps = {
   note: string;
 };
 
-/** Interior photo plus decor thumbnails; picking a thumbnail shows that decor in the main frame. */
+/**
+ * Interior photo plus decor thumbnails; picking a thumbnail shows that decor in the main frame,
+ * and clicking the main frame opens every photo in the full-screen lightbox.
+ */
 export function ProductGallery({ label, scene, swatches, swatchPrefix, note }: ProductGalleryProps) {
+  const t = useTranslations("lightbox");
   // -1 is the interior photo; 0..n are the swatches.
   const [selected, setSelected] = useState(-1);
-  const items = [
-    { src: scene.src, alt: scene.alt, caption: scene.caption },
+  // Index into `items`, or null while the lightbox is closed.
+  const [viewing, setViewing] = useState<number | null>(null);
+  const items: LightboxSlide[] = [
+    { src: scene.src, alt: scene.alt, title: scene.caption },
     ...swatches.map((swatch) => {
       const title = `${swatchPrefix} ${swatch.name}`;
-      return { src: swatch.src, alt: title, caption: title };
+      return { src: swatch.src, alt: title, title };
     }),
   ];
   const current = items[selected + 1];
@@ -31,7 +40,13 @@ export function ProductGallery({ label, scene, swatches, swatchPrefix, note }: P
   return (
     <div>
       <figure>
-        <div className="relative aspect-4/3 overflow-hidden rounded-plank bg-graphite">
+        <button
+          type="button"
+          onClick={() => setViewing(selected + 1)}
+          aria-label={t("open", { title: current.title })}
+          aria-haspopup="dialog"
+          className="group relative block aspect-4/3 w-full cursor-zoom-in overflow-hidden rounded-plank bg-graphite"
+        >
           <AnimatePresence initial={false}>
             <motion.div
               key={selected}
@@ -51,9 +66,12 @@ export function ProductGallery({ label, scene, swatches, swatchPrefix, note }: P
               />
             </motion.div>
           </AnimatePresence>
-        </div>
+          <span className="absolute top-3 right-3 flex size-10 items-center justify-center rounded-plank bg-graphite/70 text-paper backdrop-blur-sm transition-colors group-hover:text-oak">
+            <Maximize2 aria-hidden className="size-5" />
+          </span>
+        </button>
         <figcaption className="mt-3 text-sm font-medium" aria-live="polite">
-          {current.caption}
+          {current.title}
         </figcaption>
       </figure>
 
@@ -68,9 +86,9 @@ export function ProductGallery({ label, scene, swatches, swatchPrefix, note }: P
           const pressed = selected === index - 1;
           return (
             <button
-              key={item.caption}
+              key={item.title}
               type="button"
-              aria-label={item.caption}
+              aria-label={item.title}
               aria-pressed={pressed}
               onClick={() => setSelected(index - 1)}
               className={`relative aspect-square overflow-hidden rounded-plank ring-offset-2 ring-offset-graphite transition-opacity ${
@@ -83,6 +101,17 @@ export function ProductGallery({ label, scene, swatches, swatchPrefix, note }: P
         })}
       </div>
       <p className="mt-4 text-sm text-muted">{note}</p>
+
+      {/* Leafing through the lightbox moves the main frame along, so closing it leaves the last photo shown. */}
+      <Lightbox
+        slides={items}
+        index={viewing}
+        onIndexChange={(index) => {
+          setViewing(index);
+          setSelected(index - 1);
+        }}
+        onClose={() => setViewing(null)}
+      />
     </div>
   );
 }
