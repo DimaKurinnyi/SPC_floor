@@ -20,8 +20,8 @@ export function DesktopNav() {
               <Link
                 href={{ pathname: "/", hash: item.hash }}
                 aria-current={current ? "location" : undefined}
-                className={`relative block py-2 transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-center after:bg-oak after:transition-transform after:duration-300 after:ease-out hover:text-ink hover:after:scale-x-100 motion-reduce:after:transition-none ${
-                  current ? "text-ink after:scale-x-100" : "text-muted after:scale-x-0"
+                className={`relative block py-2 transition-colors duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-center after:bg-oak after:transition-transform after:duration-300 after:ease-out hover:text-paper hover:after:scale-x-100 motion-reduce:after:transition-none ${
+                  current ? "text-paper after:scale-x-100" : "text-muted after:scale-x-0"
                 }`}
               >
                 {t(item.key)}

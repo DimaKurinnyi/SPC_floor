@@ -19,7 +19,7 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
               locale={locale}
               lang={locale}
               aria-current={locale === current ? "true" : undefined}
-              className="inline-flex min-h-10 min-w-10 items-center justify-center rounded-plank px-2 font-medium uppercase text-muted transition-colors hover:text-ink aria-[current=true]:text-oak"
+              className="inline-flex min-h-10 min-w-10 items-center justify-center rounded-plank px-2 font-medium uppercase text-muted transition-colors hover:text-paper aria-[current=true]:text-oak"
             >
               {locale}
             </Link>

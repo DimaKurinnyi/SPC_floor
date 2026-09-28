@@ -8,7 +8,7 @@ export function Process() {
   const t = useTranslations("process");
 
   return (
-    <Section id="process" title={t("title")} className="border-y border-hairline bg-surface-raised/40">
+    <Section id="process" title={t("title")} className="border-y border-hairline bg-graphite-raised/40">
       <RevealList ordered className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {STEPS.map((step, index) => (
           <RevealItem key={step} className="relative border-t border-hairline pt-8">

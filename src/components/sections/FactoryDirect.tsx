@@ -19,7 +19,7 @@ export function FactoryDirect() {
         {ITEMS.map(({ key, icon: Icon }) => (
           <RevealItem
             key={key}
-            className="flex flex-col rounded-plank border border-hairline bg-surface-raised p-6 sm:p-8"
+            className="flex flex-col rounded-plank border border-hairline bg-graphite-raised p-6 sm:p-8"
           >
             <span className="flex size-12 items-center justify-center rounded-plank border border-oak/40 text-oak">
               <Icon aria-hidden className="size-6" strokeWidth={1.5} />

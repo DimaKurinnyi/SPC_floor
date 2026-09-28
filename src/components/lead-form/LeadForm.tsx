@@ -85,7 +85,7 @@ export function LeadForm() {
 
   if (sentTo) {
     return (
-      <div role="status" className="rounded-plank border border-hairline bg-surface-raised p-8 sm:p-10">
+      <div role="status" className="rounded-plank border border-hairline bg-graphite-raised p-8 sm:p-10">
         <CircleCheck aria-hidden className="size-10 text-success" strokeWidth={1.5} />
         <h3 ref={successRef} tabIndex={-1} className="mt-6 font-display text-2xl font-semibold focus:outline-none">
           {t("success.title")}
@@ -109,7 +109,7 @@ export function LeadForm() {
     <form
       onSubmit={(event) => handleSubmit(submit)(event)}
       noValidate
-      className="rounded-plank border border-hairline bg-surface-raised p-6 sm:p-10"
+      className="rounded-plank border border-hairline bg-graphite-raised p-6 sm:p-10"
     >
       <div className="grid gap-6 sm:grid-cols-2">
         <Field id={fieldId("name")} label={t("fields.name.label")} error={errorText(errors.name?.message)} wide>
@@ -213,7 +213,7 @@ export function LeadForm() {
           <legend className="mb-3 text-sm font-medium">{t("fields.interests.legend")}</legend>
           <div className="grid gap-3">
             {INTERESTS.map((interest) => (
-              <label key={interest} className="flex cursor-pointer items-start gap-3 text-muted hover:text-ink">
+              <label key={interest} className="flex cursor-pointer items-start gap-3 text-muted hover:text-paper">
                 <input
                   {...register("interests")}
                   type="checkbox"

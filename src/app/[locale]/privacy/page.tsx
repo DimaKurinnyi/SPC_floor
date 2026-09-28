@@ -25,7 +25,7 @@ export default function PrivacyPage() {
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
-      <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted hover:text-ink">
+      <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted hover:text-paper">
         <ArrowLeft aria-hidden className="size-4" />
         {t("back")}
       </Link>

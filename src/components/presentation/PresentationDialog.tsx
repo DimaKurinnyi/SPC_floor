@@ -55,7 +55,7 @@ export function PresentationDialogProvider({ children }: { children: ReactNode }
         onClick={(event) => {
           if (event.target === event.currentTarget) close();
         }}
-        className="m-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-md overflow-y-auto rounded-plank border border-hairline bg-surface-raised p-0 text-ink backdrop:bg-black/75"
+        className="m-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-md overflow-y-auto rounded-plank border border-hairline bg-graphite-raised p-0 text-paper backdrop:bg-black/75"
       >
         <div className="relative p-6 sm:p-8">
           <PresentationForm key={session} titleId={titleId} leadId={leadId} onDone={close} />
@@ -64,7 +64,7 @@ export function PresentationDialogProvider({ children }: { children: ReactNode }
             type="button"
             onClick={close}
             aria-label={t("close")}
-            className="absolute top-3 right-3 inline-flex size-11 items-center justify-center rounded-plank text-muted transition-colors hover:bg-surface hover:text-ink"
+            className="absolute top-3 right-3 inline-flex size-11 items-center justify-center rounded-plank text-muted transition-colors hover:bg-graphite hover:text-paper"
           >
             <X aria-hidden className="size-5" />
           </button>

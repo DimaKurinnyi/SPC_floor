@@ -45,7 +45,7 @@ export function ProductGallery({ label, scene, swatches, swatchPrefix, note }: P
           onClick={() => setViewing(selected + 1)}
           aria-label={t("open", { title: current.title })}
           aria-haspopup="dialog"
-          className="group relative block aspect-4/3 w-full cursor-zoom-in overflow-hidden rounded-plank bg-surface"
+          className="group relative block aspect-4/3 w-full cursor-zoom-in overflow-hidden rounded-plank bg-graphite"
         >
           <AnimatePresence initial={false}>
             <motion.div
@@ -66,7 +66,7 @@ export function ProductGallery({ label, scene, swatches, swatchPrefix, note }: P
               />
             </motion.div>
           </AnimatePresence>
-          <span className="theme-dark absolute top-3 right-3 flex size-10 items-center justify-center rounded-plank bg-surface/70 text-ink backdrop-blur-sm transition-colors group-hover:text-oak">
+          <span className="absolute top-3 right-3 flex size-10 items-center justify-center rounded-plank bg-graphite/70 text-paper backdrop-blur-sm transition-colors group-hover:text-oak">
             <Maximize2 aria-hidden className="size-5" />
           </span>
         </button>
@@ -91,7 +91,7 @@ export function ProductGallery({ label, scene, swatches, swatchPrefix, note }: P
               aria-label={item.title}
               aria-pressed={pressed}
               onClick={() => setSelected(index - 1)}
-              className={`relative aspect-square overflow-hidden rounded-plank ring-offset-2 ring-offset-surface transition-opacity ${
+              className={`relative aspect-square overflow-hidden rounded-plank ring-offset-2 ring-offset-graphite transition-opacity ${
                 pressed ? "ring-2 ring-oak" : "opacity-70 hover:opacity-100"
               }`}
             >
