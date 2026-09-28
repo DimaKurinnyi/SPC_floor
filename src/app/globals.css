@@ -1,23 +1,25 @@
 @import "tailwindcss";
 
 /*
- * Palette from the brief. Contrast on graphite #1A1A1A:
- * paper 17:1, muted 7.3:1, faint 5.2:1, oak 7.7:1, amber 8.3:1.
+ * Light theme. Contrast on surface #F8F9FA:
+ * ink 16.5:1, muted 6.1:1, faint 4.7:1, oak 5.6:1, danger 5.5:1, success 5.1:1, field-border 3.1:1.
  * Amber is a fill only: text on it is graphite (8.3:1); white on amber fails (2.1:1).
+ * Areas over photos (captions, decor strips, the lightbox) use .theme-dark below.
  */
 @theme {
+  --color-surface: #f8f9fa;
+  --color-surface-raised: #ffffff;
+  --color-hairline: #dee2e6;
+  --color-field-border: #868e96;
+  --color-ink: #1a1a1a;
+  --color-muted: #5c5f63;
+  --color-faint: #6c7075;
+  --color-oak: #8a5a2c;
   --color-graphite: #1a1a1a;
-  --color-graphite-raised: #232323;
-  --color-hairline: #333333;
-  --color-field-border: #777777;
-  --color-paper: #f8f9fa;
-  --color-muted: #a8a8a8;
-  --color-faint: #8c8c8c;
-  --color-oak: #d4a373;
   --color-amber: #d4af37;
   --color-amber-hover: #e2c25a;
-  --color-danger: #f28b82;
-  --color-success: #7fd1a8;
+  --color-danger: #c5221f;
+  --color-success: #1e7a4a;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
@@ -39,20 +41,21 @@
   }
 
   body {
-    background-color: var(--color-graphite);
-    color: var(--color-paper);
+    background-color: var(--color-surface);
+    color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: var(--color-oak);
+    background-color: var(--color-amber);
     color: var(--color-graphite);
   }
 
+  /* Oak rather than amber: amber on the light surface is only about 2:1. */
   :focus-visible {
-    outline: 2px solid var(--color-amber);
+    outline: 2px solid var(--color-oak);
     outline-offset: 3px;
   }
 
@@ -74,6 +77,26 @@
     dialog[open]::backdrop {
       animation: none;
     }
+  }
+}
+
+/*
+ * The original dark palette, for areas laid over photos. Contrast on #1A1A1A:
+ * ink 17:1, muted 7.3:1, faint 5.2:1, oak 7.7:1.
+ */
+@layer base {
+  .theme-dark {
+    --color-surface: #1a1a1a;
+    --color-surface-raised: #232323;
+    --color-hairline: #333333;
+    --color-field-border: #777777;
+    --color-ink: #f8f9fa;
+    --color-muted: #a8a8a8;
+    --color-faint: #8c8c8c;
+    --color-oak: #d4a373;
+    --color-danger: #f28b82;
+    --color-success: #7fd1a8;
+    color: var(--color-ink);
   }
 }
 

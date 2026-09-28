@@ -11,7 +11,7 @@ export function Header() {
   const t = useTranslations("nav");
 
   return (
-    <header className="sticky top-0 z-40 border-b border-hairline bg-graphite/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-hairline bg-surface/90 backdrop-blur-md">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-4 focus:z-50 focus:rounded-plank focus:bg-amber focus:px-4 focus:py-2 focus:text-graphite"

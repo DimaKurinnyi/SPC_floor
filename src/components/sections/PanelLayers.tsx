@@ -40,20 +40,20 @@ function buildLayers(ids: { decor: string; core: string; foam: string }, decor: 
       key: "uv",
       thickness: 4,
       style: {
-        top: "rgba(248,249,250,0.10)",
-        front: "rgba(248,249,250,0.22)",
-        side: "rgba(248,249,250,0.14)",
-        stroke: "rgba(248,249,250,0.55)",
+        top: "rgba(26,26,26,0.05)",
+        front: "rgba(26,26,26,0.14)",
+        side: "rgba(26,26,26,0.09)",
+        stroke: "rgba(26,26,26,0.45)",
       },
     },
     {
       key: "wear",
       thickness: 8,
       style: {
-        top: "rgba(248,249,250,0.05)",
-        front: "rgba(248,249,250,0.12)",
-        side: "rgba(248,249,250,0.08)",
-        stroke: "rgba(248,249,250,0.35)",
+        top: "rgba(26,26,26,0.03)",
+        front: "rgba(26,26,26,0.08)",
+        side: "rgba(26,26,26,0.05)",
+        stroke: "rgba(26,26,26,0.3)",
       },
     },
     { key: "decor", thickness: 6, style: { top: `url(#${ids.decor})`, ...DECOR_SIDES[decor] } },
@@ -191,10 +191,10 @@ export function PanelLayers({ labels, labelsTitle, decor = "wood", format = "pla
                   x2={LABEL_X - 8}
                   y1={edgeY(index)}
                   y2={edgeY(index)}
-                  stroke="#d4a373"
+                  className="stroke-oak"
                   strokeWidth="1"
                 />
-                <circle cx={BACK_EDGE_X + 6} cy={edgeY(index)} r="2.5" fill="#d4a373" />
+                <circle cx={BACK_EDGE_X + 6} cy={edgeY(index)} r="2.5" className="fill-oak" />
               </motion.g>
             </motion.g>
           ))}
@@ -214,7 +214,7 @@ export function PanelLayers({ labels, labelsTitle, decor = "wood", format = "pla
               top: `${((edgeY(index) + lift(index)) / VIEW_H) * 100}%`,
             }}
           >
-            <p className="text-[11px] leading-tight font-medium text-paper sm:text-sm">{label.name}</p>
+            <p className="text-[11px] leading-tight font-medium text-ink sm:text-sm">{label.name}</p>
             {/* On phones only the names fit between the layers; screen readers still get the text. */}
             <p className="mt-0.5 text-xs leading-snug text-muted sr-only sm:not-sr-only">{label.text}</p>
           </motion.li>

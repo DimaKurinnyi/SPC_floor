@@ -20,7 +20,7 @@ export function Catalog() {
   const t = useTranslations("catalog");
 
   return (
-    <Section id="products" title={t("title")} lead={t("lead")} className="border-y border-hairline bg-graphite-raised/40">
+    <Section id="products" title={t("title")} lead={t("lead")} className="border-y border-hairline bg-surface-raised/40">
       <div className="grid gap-16 sm:gap-20">
         {PRODUCTS.map((product, index) => (
           <Product key={product.id} {...product} mirrored={index % 2 === 1} />

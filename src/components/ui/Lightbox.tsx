@@ -33,7 +33,7 @@ const slideVariants = {
 };
 
 const controlClasses =
-  "inline-flex size-11 shrink-0 items-center justify-center rounded-plank text-paper transition-colors hover:text-oak";
+  "inline-flex size-11 shrink-0 items-center justify-center rounded-plank text-ink transition-colors hover:text-oak";
 
 /**
  * Full-screen photo viewer in a native <dialog>: swipe or drag, arrow keys, the side buttons
@@ -103,7 +103,7 @@ export function Lightbox({ slides, index, onIndexChange, onClose }: LightboxProp
         if (event.key === "ArrowRight") step(1);
         if (event.key === "ArrowLeft") step(-1);
       }}
-      className="m-0 size-full max-h-none max-w-none bg-graphite/95 p-0 text-paper backdrop-blur-md backdrop:bg-transparent"
+      className="theme-dark m-0 size-full max-h-none max-w-none bg-surface/95 p-0 text-ink backdrop-blur-md backdrop:bg-transparent"
     >
       <div className="flex h-full flex-col">
         <div className="flex items-center justify-between gap-4 py-2 pr-2 pl-4 sm:pr-4 sm:pl-6">
@@ -181,7 +181,7 @@ export function Lightbox({ slides, index, onIndexChange, onClose }: LightboxProp
                 type="button"
                 onClick={() => step(-1)}
                 aria-label={t("previous")}
-                className={`${controlClasses} absolute top-1/2 left-2 -translate-y-1/2 bg-graphite/70 sm:left-4`}
+                className={`${controlClasses} absolute top-1/2 left-2 -translate-y-1/2 bg-surface/70 sm:left-4`}
               >
                 <ChevronLeft aria-hidden className="size-6" />
               </button>
@@ -189,7 +189,7 @@ export function Lightbox({ slides, index, onIndexChange, onClose }: LightboxProp
                 type="button"
                 onClick={() => step(1)}
                 aria-label={t("next")}
-                className={`${controlClasses} absolute top-1/2 right-2 -translate-y-1/2 bg-graphite/70 sm:right-4`}
+                className={`${controlClasses} absolute top-1/2 right-2 -translate-y-1/2 bg-surface/70 sm:right-4`}
               >
                 <ChevronRight aria-hidden className="size-6" />
               </button>

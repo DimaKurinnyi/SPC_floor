@@ -18,12 +18,12 @@ export function Footer() {
           <h2 className="font-display font-semibold">{t("contact")}</h2>
           <ul className="mt-4 grid gap-2 text-muted">
             <li>
-              <a href={companyPhoneHref} className="hover:text-paper">
+              <a href={companyPhoneHref} className="hover:text-ink">
                 {company.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${company.email}`} className="hover:text-paper">
+              <a href={`mailto:${company.email}`} className="hover:text-ink">
                 {company.email}
               </a>
             </li>
@@ -62,7 +62,7 @@ export function Footer() {
       <div className="border-t border-hairline">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-sm text-faint sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>{t("rights", { year, name: company.legalName })}</p>
-          <Link href="/privacy" className="hover:text-paper">
+          <Link href="/privacy" className="hover:text-ink">
             {t("privacy")}
           </Link>
         </div>

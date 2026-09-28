@@ -13,7 +13,7 @@ import type { SendFailure } from "@/lib/lead/send-lead";
 // Shared building blocks for the lead form and the sample-presentation dialog.
 
 export const controlClasses =
-  "w-full rounded-plank border border-field-border bg-graphite px-4 py-3 text-base text-paper placeholder:text-faint transition-colors hover:border-muted aria-invalid:border-danger";
+  "w-full rounded-plank border border-field-border bg-surface px-4 py-3 text-base text-ink placeholder:text-faint transition-colors hover:border-muted aria-invalid:border-danger";
 
 /** Translates a schema error key (see LeadErrorKey) into the current language. */
 export function useErrorText() {
@@ -93,7 +93,7 @@ function RequiredMark({ text }: { text: string }) {
 
 /** Renders the `<link>` chunk of a consent message as a link to the privacy policy in a new tab. */
 export const privacyLink = (chunks: ReactNode) => (
-  <Link href="/privacy" target="_blank" className="text-paper underline underline-offset-4 hover:text-oak">
+  <Link href="/privacy" target="_blank" className="text-ink underline underline-offset-4 hover:text-oak">
     {chunks}
   </Link>
 );

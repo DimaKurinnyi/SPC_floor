@@ -65,7 +65,7 @@ export function Decors() {
               tabIndex={selected ? 0 : -1}
               onClick={() => setActive(product)}
               className={`-mb-px border-b-2 pb-3 text-left font-display text-sm font-semibold transition-colors sm:text-lg ${
-                selected ? "border-oak text-paper" : "border-transparent text-muted hover:text-paper"
+                selected ? "border-oak text-ink" : "border-transparent text-muted hover:text-ink"
               }`}
             >
               {tc(`products.${product}.name`)}
@@ -92,7 +92,7 @@ export function Decors() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.6 }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: index * 0.08 }}
-                className={`relative overflow-hidden rounded-plank md:w-[81%] ${STRIP_HEIGHT[product]} ${OFFSETS[index % OFFSETS.length]}`}
+                className={`theme-dark relative overflow-hidden rounded-plank md:w-[81%] ${STRIP_HEIGHT[product]} ${OFFSETS[index % OFFSETS.length]}`}
               >
                 <Image
                   src={swatch.src}
@@ -102,7 +102,7 @@ export function Decors() {
                   sizes="(min-width: 768px) 70vw, 100vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-linear-to-r from-graphite/85 via-graphite/30 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-r from-surface/85 via-surface/30 to-transparent" />
                 <p className="absolute inset-y-0 left-0 flex items-center px-6 font-display text-lg font-semibold">
                   {`${tc(`products.${product}.swatchPrefix`)} ${swatch.name}`}
                 </p>

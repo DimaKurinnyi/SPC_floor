@@ -35,7 +35,7 @@ export function MobileMenu() {
         aria-expanded={open}
         aria-controls="mobile-menu"
         aria-label={open ? t("closeMenu") : t("openMenu")}
-        className="inline-flex size-11 items-center justify-center rounded-plank text-paper hover:bg-graphite-raised"
+        className="inline-flex size-11 items-center justify-center rounded-plank text-ink hover:bg-surface-raised"
       >
         {open ? <X aria-hidden className="size-6" /> : <Menu aria-hidden className="size-6" />}
       </button>
@@ -48,7 +48,7 @@ export function MobileMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-x-0 top-full border-b border-hairline bg-graphite px-4 pt-2 pb-6 sm:px-6"
+            className="absolute inset-x-0 top-full border-b border-hairline bg-surface px-4 pt-2 pb-6 sm:px-6"
           >
             <ul className="divide-y divide-hairline">
               {NAV_ITEMS.map((item) => {
@@ -59,7 +59,7 @@ export function MobileMenu() {
                       href={{ pathname: "/", hash: item.hash }}
                       onClick={close}
                       aria-current={current ? "location" : undefined}
-                      className="group flex min-h-12 items-center font-display text-lg text-paper"
+                      className="group flex min-h-12 items-center font-display text-lg text-ink"
                     >
                       {/* Same underline as the desktop nav, sized to the text rather than the whole row. */}
                       <span

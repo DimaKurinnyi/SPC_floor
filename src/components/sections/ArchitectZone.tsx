@@ -39,7 +39,7 @@ export function ArchitectZone() {
                 </span>
                 <p className="pt-2.5 leading-relaxed text-muted">
                   {t.rich(`items.${key}`, {
-                    b: (chunks) => <strong className="font-semibold text-paper">{chunks}</strong>,
+                    b: (chunks) => <strong className="font-semibold text-ink">{chunks}</strong>,
                   })}
                 </p>
               </RevealItem>

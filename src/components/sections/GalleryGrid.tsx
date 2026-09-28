@@ -40,9 +40,9 @@ export function GalleryGrid({ photos }: { photos: GalleryPhoto[] }) {
                 sizes={i === 0 ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, 50vw"}
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
               />
-              <span className="absolute inset-x-0 bottom-0 bg-linear-to-t from-graphite/90 via-graphite/40 to-transparent px-3 pt-10 pb-3 text-left sm:px-4">
+              <span className="theme-dark absolute inset-x-0 bottom-0 bg-linear-to-t from-surface/90 via-surface/40 to-transparent px-3 pt-10 pb-3 text-left sm:px-4">
                 <span className="block text-xs text-oak">{item.category}</span>
-                <span className="block text-sm font-medium text-paper">{item.title}</span>
+                <span className="block text-sm font-medium text-ink">{item.title}</span>
               </span>
             </button>
           </RevealItem>
