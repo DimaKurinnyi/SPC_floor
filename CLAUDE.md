@@ -49,10 +49,10 @@ Copy `.env.example` to `.env.local`. Without the Resend variables the form still
 
 The design tokens are in `@theme` in `src/app/globals.css`. The contrast figures behind them are in the comment there.
 
-- The site is light: `surface` `#F8F9FA` background, `ink` `#1A1A1A` text, `surface-raised` white cards. Use these semantic names, not hex values.
+- The site is light on warm stone grey: `surface` `#E8E6E1` background, `ink` `#1A1A1A` text, `surface-raised` `#F5F4F0` ivory cards. Use these semantic names, not hex values.
 - Areas laid over photos (gallery captions, decor strips, the lightbox, the zoom button) carry the `theme-dark` class, which swaps the same tokens back to the dark palette.
 - Amber `#D4AF37` is a button fill only, always with `text-graphite`. White on amber fails contrast (2.1:1), and amber on the light surface is only about 2:1, so focus outlines use oak.
-- Oak is the accent for icons, markers, lines and small text: `#8A5A2C` on light (5.6:1), `#D4A373` inside `theme-dark`.
+- Oak is the accent for icons, markers, lines and small text: `#7F5226` on light (5.4:1), `#D4A373` inside `theme-dark`.
 
 `buttonClasses()` includes `inline-flex`. To hide a button responsively, wrap it in an element that carries `hidden sm:block`. A `hidden` class on the button itself loses to `inline-flex`.
 
