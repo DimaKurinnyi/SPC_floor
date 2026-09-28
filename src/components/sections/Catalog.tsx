@@ -5,6 +5,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { PanelLayers, type PanelDecor, type PanelFormat } from "./PanelLayers";
 import { ProductGallery } from "./ProductGallery";
+import { ProductTabs } from "./ProductTabs";
+import { SpecsDisclosure } from "./SpecsDisclosure";
 
 // Top to bottom, the order PanelLayers draws them in.
 const LAYERS = ["uv", "wear", "decor", "core", "underlay"] as const;
@@ -21,18 +23,21 @@ export function Catalog() {
 
   return (
     <Section id="products" title={t("title")} lead={t("lead")} className="border-y border-hairline bg-graphite-raised/40">
-      <div className="grid gap-16 sm:gap-20">
-        {PRODUCTS.map((product, index) => (
-          <Product key={product.id} {...product} mirrored={index % 2 === 1} />
-        ))}
-      </div>
+      <ProductTabs
+        label={t("title")}
+        tabs={PRODUCTS.map((product) => ({
+          id: product.id,
+          label: t(`products.${product.id}.name`),
+          content: <Product {...product} />,
+        }))}
+      />
     </Section>
   );
 }
 
-type ProductProps = { mirrored: boolean } & (typeof PRODUCTS)[number];
+type ProductProps = (typeof PRODUCTS)[number];
 
-function Product({ id, decor, format, mirrored }: ProductProps) {
+function Product({ id, decor, format }: ProductProps) {
   const t = useTranslations("catalog");
   const messages = useMessages();
   const p = `products.${id}` as const;
@@ -41,12 +46,13 @@ function Product({ id, decor, format, mirrored }: ProductProps) {
   const specs = Object.entries(messages.catalog.products[id].specs);
 
   return (
-    <article aria-labelledby={headingId} className={mirrored ? "border-t border-hairline pt-16 sm:pt-20" : undefined}>
+    <article aria-labelledby={headingId}>
       <Reveal className="max-w-2xl">
-        <h3 id={headingId} className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+        {/* The tab already shows the name; the heading keeps the outline h2 > h3 > h4. */}
+        <h3 id={headingId} className="sr-only">
           {t(`${p}.name`)}
         </h3>
-        <p className="mt-2 font-medium text-oak">{t(`${p}.variant`)}</p>
+        <p className="font-medium text-oak">{t(`${p}.variant`)}</p>
         <p className="mt-4 text-lg leading-relaxed text-muted text-pretty">{t(`${p}.description`)}</p>
       </Reveal>
 
@@ -59,7 +65,7 @@ function Product({ id, decor, format, mirrored }: ProductProps) {
             name: t(`${p}.layers.${layer}.name`),
             text: t(`${p}.layers.${layer}.text`),
           }))}
-          className={`lg:col-span-7 ${mirrored ? "lg:order-2" : ""}`}
+          className="lg:col-span-7"
         />
         <Reveal className="lg:col-span-5">
           <ProductGallery
@@ -72,16 +78,17 @@ function Product({ id, decor, format, mirrored }: ProductProps) {
         </Reveal>
       </div>
 
-      <Reveal className="mt-16">
-        <h4 className="font-display text-lg font-semibold">{t("specsTitle")}</h4>
-        <dl className="mt-6 grid gap-x-12 md:grid-cols-2">
-          {specs.map(([row, { label, value }]) => (
-            <div key={row} className="flex items-baseline justify-between gap-6 border-b border-hairline py-4">
-              <dt className="text-muted">{label}</dt>
-              <dd className="text-right font-medium">{value}</dd>
-            </div>
-          ))}
-        </dl>
+      <Reveal className="mt-12">
+        <SpecsDisclosure label={t("specsToggle")}>
+          <dl className="mt-4 grid gap-x-12 md:grid-cols-2">
+            {specs.map(([row, { label, value }]) => (
+              <div key={row} className="flex items-baseline justify-between gap-6 border-b border-hairline py-4">
+                <dt className="text-muted">{label}</dt>
+                <dd className="text-right font-medium">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </SpecsDisclosure>
         <LeadCta interest="wholesaleQuote" className="mt-10">
           {t("cta")}
         </LeadCta>

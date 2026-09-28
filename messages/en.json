@@ -20,7 +20,7 @@
   "hero": {
     "title": "Import and Project Deliveries of SPC Flooring Directly from the Factory",
     "lead": "Modern vinyl flooring and large-format SPC wall panels for developers, contractors and investors across Poland.",
-    "ctaQuote": "Request a Project Quote",
+    "ctaQuote": "Request a Quote",
     "ctaMeeting": "Book a Sample Presentation",
     "facts": {
       "batch": {
@@ -42,7 +42,7 @@
     "title": "Choose the Right Solution for Your Project",
     "lead": "We offer flexible project delivery terms for two main product categories:",
     "layersTitle": "Layers from the top",
-    "specsTitle": "Specifications",
+    "specsToggle": "View specifications",
     "gallery": "Photos and decors",
     "sceneLabel": "Interior view",
     "cta": "Ask About Availability and B2B Pricing",

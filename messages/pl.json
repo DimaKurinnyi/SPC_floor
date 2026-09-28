@@ -20,7 +20,7 @@
   "hero": {
     "title": "Import i Dostawy Obiektowe Podłóg SPC Bezpośrednio z Fabryki",
     "lead": "Nowoczesne winylowe podłogi oraz wielkoformatowe panele ścienne SPC dla deweloperów, wykonawców i inwestorów w całej Polsce.",
-    "ctaQuote": "Poproś o Wycenę Inwestycyjną",
+    "ctaQuote": "Poproś o Wycenę",
     "ctaMeeting": "Umów Prezentację Wzorników",
     "facts": {
       "batch": {
@@ -39,10 +39,10 @@
     "imageAlt": "Korytarz z drewnianą podłogą i betonową ścianą w ciepłym świetle"
   },
   "catalog": {
-    "title": "Wybierz Rozwiązanie dla Twojej Inwestycji",
+    "title": "Wybierz Rozwiązanie dla Twojego Projektu",
     "lead": "Oferujemy elastyczne warunki dostaw obiektowych dla dwóch głównych kategorii produktów:",
     "layersTitle": "Warstwy od góry",
-    "specsTitle": "Specyfikacja",
+    "specsToggle": "Zobacz specyfikację",
     "gallery": "Zdjęcia i dekory",
     "sceneLabel": "Aranżacja wnętrza",
     "cta": "Zapytaj o Dostępność i Cennik B2B",
