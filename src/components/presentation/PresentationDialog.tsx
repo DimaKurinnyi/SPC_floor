@@ -166,6 +166,25 @@ function PresentationForm({ titleId, leadId, onDone }: PresentationFormProps) {
           )}
         </Field>
 
+        <Field
+          id={fieldId("email")}
+          label={t("fields.email.label")}
+          required={tForm("required")}
+          error={errorText(errors.email?.message)}
+        >
+          {(a11y) => (
+            <input
+              {...a11y}
+              {...register("email")}
+              type="email"
+              inputMode="email"
+              autoComplete="email"
+              placeholder={t("fields.email.placeholder")}
+              className={controlClasses}
+            />
+          )}
+        </Field>
+
         <ConsentField
           id={fieldId("consent")}
           registration={register("consent")}

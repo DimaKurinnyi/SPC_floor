@@ -87,8 +87,9 @@ export function buildPresentationEmail(request: PresentationFormValues, locale: 
     [
       [presentationFields.name.label, request.name],
       [presentationFields.phone.label, phone],
+      [presentationFields.email.label, request.email],
       ["Język formularza", LOCALE_NAMES[locale] ?? locale],
     ],
-    "Klient zostawił tylko numer telefonu. Zadzwoń, aby ustalić termin i miejsce prezentacji.",
+    "Zadzwoń albo odpowiedz na tę wiadomość, aby ustalić z klientem termin i miejsce prezentacji.",
   );
 }

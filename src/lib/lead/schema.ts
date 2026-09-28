@@ -41,6 +41,7 @@ const phoneField = z
   .trim()
   .min(1, { error: err("phoneRequired"), abort: true })
   .refine((v) => /^\+?\d{9,15}$/.test(normalizePhone(v)), err("phoneInvalid"));
+const emailField = z.string().trim().min(1, err("emailRequired")).pipe(z.email(err("emailInvalid")));
 const consentField = z.boolean().refine((v) => v, err("consentRequired"));
 
 /** The full inquiry form in the contact section. */
@@ -48,7 +49,7 @@ export const leadSchema = z
   .object({
     name: nameField,
     phone: phoneField,
-    email: z.string().trim().min(1, err("emailRequired")).pipe(z.email(err("emailInvalid"))),
+    email: emailField,
     investmentType: z.union([z.enum(INVESTMENT_TYPES), z.literal("")]),
     investmentTypeOther: z.string().trim().max(120, err("otherTooLong")),
     area: z
@@ -79,10 +80,11 @@ export const leadFormDefaults: LeadFormValues = {
   consent: false,
 };
 
-/** The short "book a sample presentation" dialog: name and phone only. */
+/** The short "book a sample presentation" dialog: name, phone and email. */
 export const presentationSchema = z.object({
   name: nameField,
   phone: phoneField,
+  email: emailField,
   consent: consentField,
 });
 
@@ -91,5 +93,6 @@ export type PresentationFormValues = z.input<typeof presentationSchema>;
 export const presentationFormDefaults: PresentationFormValues = {
   name: "",
   phone: "",
+  email: "",
   consent: false,
 };

@@ -396,6 +396,10 @@
         "label": "Phone number",
         "placeholder": "+48 600 000 000"
       },
+      "email": {
+        "label": "Email address",
+        "placeholder": "john@company.com"
+      },
       "consent": {
         "label": "I consent to the processing of my personal data for the purpose of arranging a sample presentation. <link>Privacy Policy</link>."
       }

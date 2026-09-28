@@ -396,6 +396,10 @@
         "label": "Numer telefonu",
         "placeholder": "+48 600 000 000"
       },
+      "email": {
+        "label": "Adres e-mail",
+        "placeholder": "jan@firma.pl"
+      },
       "consent": {
         "label": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu umówienia prezentacji wzorników. <link>Polityka Prywatności</link>."
       }

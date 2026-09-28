@@ -68,7 +68,7 @@ export async function sendLead(values: LeadFormValues, meta: SendMeta): Promise<
   });
 }
 
-/** The short sample-presentation dialog: name and phone, no email to reply to. */
+/** The short sample-presentation dialog. Replies go straight to the client's email. */
 export async function sendPresentationRequest(
   values: PresentationFormValues,
   meta: SendMeta,
@@ -79,5 +79,8 @@ export async function sendPresentationRequest(
   const parsed = presentationSchema.safeParse(values);
   if (!parsed.success) return { ok: false, error: "validation" };
 
-  return deliver(buildPresentationEmail(parsed.data, emailLocale(meta.locale)));
+  return deliver({
+    ...buildPresentationEmail(parsed.data, emailLocale(meta.locale)),
+    replyTo: parsed.data.email,
+  });
 }
