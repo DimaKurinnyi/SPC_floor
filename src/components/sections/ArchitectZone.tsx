@@ -14,7 +14,7 @@ export function ArchitectZone() {
   const t = useTranslations("architects");
 
   return (
-    <section id="architects" aria-labelledby="architects-title" className="py-20 sm:py-28">
+    <section id="architects" aria-labelledby="architects-title" className="pb-10 sm:pb-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* A third narrower than the other sections (736px vs 1104px), so the panel reads as an aside. */}
         <div className="mx-auto max-w-184 rounded-plank border border-oak/30 bg-oak/8 p-6 sm:p-10 lg:p-12">

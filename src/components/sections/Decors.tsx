@@ -54,7 +54,7 @@ export function Decors() {
   };
 
   return (
-    <Section id="decors" title={t("title")} lead={t("lead")}>
+    <Section id="decors" title={t("title")} lead={t("lead")} className="pb-10 sm:pb-12">
       <div
         role="tablist"
         aria-label={t("title")}
