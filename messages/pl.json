@@ -288,7 +288,6 @@
   },
   "certificates": {
     "title": "Certyfikaty i bezpieczeństwo",
-    "lead": "Panele SPC są bezpieczne dla zdrowia: bez formaldehydu i ortoftalanów, z certyfikatem jakości powietrza Intertek Clean Air Gold.",
     "items": {
       "intertek": "Intertek Clean Air Gold",
       "formaldehydeFree": "Bez formaldehydu",
