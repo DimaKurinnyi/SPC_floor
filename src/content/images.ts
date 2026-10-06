@@ -58,18 +58,13 @@ const gallery = [
   { id: "livingDarkOak", category: "residential", src: galleryLivingDarkOak },
 ] as const satisfies { id: string; category: GalleryCategory; src: StaticImageData }[];
 
-/** Badges in the Certificates section: the main certificate on top, the rest in a row below. Alt texts are in `certificates.items.<id>`. */
-const certificates = {
-  main: { id: "intertek", src: certIntertek },
-  row: [
-    { id: "phthalateFree", src: certPhthalateFree },
-    { id: "formaldehydeFree", src: certFormaldehydeFree },
-    { id: "antibacterial", src: certAntibacterial },
-  ],
-} as const satisfies {
-  main: { id: string; src: StaticImageData };
-  row: { id: string; src: StaticImageData }[];
-};
+/** Badges in the Certificates section, in row order. Alt texts are in `certificates.items.<id>`. */
+const certificates = [
+  { id: "intertek", src: certIntertek },
+  { id: "phthalateFree", src: certPhthalateFree },
+  { id: "formaldehydeFree", src: certFormaldehydeFree },
+  { id: "antibacterial", src: certAntibacterial },
+] as const satisfies { id: string; src: StaticImageData }[];
 
 export const images = {
   hero: heroInterior,
