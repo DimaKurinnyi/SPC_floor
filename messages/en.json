@@ -218,6 +218,27 @@
       }
     }
   },
+  "features": {
+    "title": "Benefits of SPC Panels",
+    "items": {
+      "click": "Easy click installation",
+      "waterproof": "100% waterproof",
+      "underlay": "Built-in IXPE underlay",
+      "underfloorHeating": "Suitable for underfloor heating",
+      "indent": "Indent resistant, strong and stable",
+      "overExisting": "Lays over existing floors",
+      "hdDesign": "HD designs and textures",
+      "slipQuiet": "Slip resistant and ultra quiet",
+      "eco": "Environmentally friendly",
+      "warm": "Naturally warmer underfoot",
+      "standards": "Meets ISO and ASTM standards",
+      "wear": "Wear resistant",
+      "fire": "Hard to ignite (Bfl-s1)",
+      "shield": "Ultimate Shield surface coating",
+      "stain": "Stain resistant",
+      "healthy": "A healthy flooring choice"
+    }
+  },
   "gallery": {
     "title": "See Our Products in Finished Interiors",
     "lead": "See how SPC panels look in residential developments, offices and commercial spaces.",
