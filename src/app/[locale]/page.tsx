@@ -1,5 +1,6 @@
 import { ArchitectZone } from "@/components/sections/ArchitectZone";
 import { Catalog } from "@/components/sections/Catalog";
+import { Certificates } from "@/components/sections/Certificates";
 import { Contact } from "@/components/sections/Contact";
 import { Decors } from "@/components/sections/Decors";
 import { FactoryDirect } from "@/components/sections/FactoryDirect";
@@ -16,9 +17,9 @@ export default function HomePage() {
       <Gallery />
       <Decors />
       <ArchitectZone />
-      <Contact />
       <Process />
-      
+      <Contact />
+      <Certificates />
     </>
   );
 }

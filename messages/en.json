@@ -286,6 +286,16 @@
     },
     "cta": "Contact Us About B2B Partnership"
   },
+  "certificates": {
+    "title": "Certificates and Safety",
+    "lead": "SPC panels are safe for health: free of formaldehyde and ortho-phthalates, and certified Intertek Clean Air Gold for indoor air quality.",
+    "items": {
+      "intertek": "Intertek Clean Air Gold",
+      "formaldehydeFree": "Formaldehyde free",
+      "phthalateFree": "Ortho-phthalate free",
+      "antibacterial": "Antibacterial surface"
+    }
+  },
   "process": {
     "title": "How we work together",
     "steps": {
