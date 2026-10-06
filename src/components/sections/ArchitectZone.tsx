@@ -16,8 +16,9 @@ export function ArchitectZone() {
   return (
     <section id="architects" aria-labelledby="architects-title" className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid gap-12 rounded-plank border border-oak/30 bg-oak/8 p-6 sm:p-10 lg:grid-cols-12 lg:gap-16 lg:p-14">
-          <Reveal className="lg:col-span-5">
+        {/* A third narrower than the other sections (736px vs 1104px), so the panel reads as an aside. */}
+        <div className="mx-auto max-w-184 rounded-plank border border-oak/30 bg-oak/8 p-6 sm:p-10 lg:p-12">
+          <Reveal>
             <h2
               id="architects-title"
               className="font-display text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-4xl"
@@ -25,13 +26,9 @@ export function ArchitectZone() {
               {t("title")}
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted text-pretty">{t("lead")}</p>
-            {/* Opens the form with "Biuro Projektowe" already chosen as the investment type. */}
-            <LeadCta investmentType="designOffice" className="mt-10">
-              {t("cta")}
-            </LeadCta>
           </Reveal>
 
-          <RevealList className="grid content-center gap-8 lg:col-span-7">
+          <RevealList className="mt-10 grid gap-6 border-t border-oak/20 pt-10">
             {ITEMS.map(({ key, icon: Icon }) => (
               <RevealItem key={key} className="flex gap-5">
                 <span className="flex size-12 shrink-0 items-center justify-center rounded-plank border border-oak/40 text-oak">
@@ -45,6 +42,13 @@ export function ArchitectZone() {
               </RevealItem>
             ))}
           </RevealList>
+
+          <Reveal>
+            {/* Opens the form with "Biuro Projektowe" already chosen as the investment type. */}
+            <LeadCta investmentType="designOffice" className="mt-10">
+              {t("cta")}
+            </LeadCta>
+          </Reveal>
         </div>
       </div>
     </section>
