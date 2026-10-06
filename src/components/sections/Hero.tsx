@@ -42,7 +42,7 @@ export function Hero() {
                 preload
                 placeholder="blur"
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
+                className="object-cover object-[78%_50%] lg:object-[96%_50%]"
               />
             </div>
           </Reveal>

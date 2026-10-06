@@ -2,8 +2,8 @@
 import type { StaticImageData } from "next/image";
 import { collections, type CollectionPhoto } from "./collections";
 
-// Temporary CC0 photo found through Openverse (StockSnap). Replace with a real project photo.
-import heroCorridor from "../../public/images/placeholder/hero-corridor.jpg";
+// Hero interior from the laminaut repo (moderatom-clone/public/assets/hero-products.png).
+import heroInterior from "../../public/images/hero/hero-products.png";
 
 // Product photos taken from laminaut.vercel.app (locking-planks and stone-tile-inspired pages).
 import floorsScene from "../../public/images/products/floors/scene.jpg";
@@ -72,7 +72,7 @@ const certificates = {
 };
 
 export const images = {
-  hero: heroCorridor,
+  hero: heroInterior,
   gallery,
   certificates,
   products: {
