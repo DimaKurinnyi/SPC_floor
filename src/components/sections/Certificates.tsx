@@ -1,29 +1,37 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { images } from "@/content/images";
-import { RevealItem, RevealList } from "@/components/ui/Reveal";
+import { Reveal, RevealItem, RevealList } from "@/components/ui/Reveal";
 
-/** A plain row of certificate and material-safety badges under the contact form, with no heading. */
+/**
+ * Certificate and material-safety badges under the contact form, with no heading: the main
+ * certificate centred on top, the other badges in a row below. They sit straight on the page
+ * background, so their files have a transparent background (see images.ts).
+ */
 export function Certificates() {
   const t = useTranslations("certificates");
+  const { main, row } = images.certificates;
 
   return (
-    <section id="certificates" aria-label={t("title")} className="border-t border-hairline py-12 sm:py-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <RevealList className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-          {images.certificates.map(({ id, src }) => (
-            <RevealItem key={id}>
-              {/* The badges come on white, so they sit on white tiles of one size. */}
-              <div className="relative aspect-4/3 overflow-hidden rounded-plank bg-white">
-                <Image
-                  src={src}
-                  alt={t(`items.${id}`)}
-                  fill
-                  placeholder="blur"
-                  sizes="(min-width: 1024px) 270px, 50vw"
-                  className="object-contain p-4 sm:p-6"
-                />
-              </div>
+    <section id="certificates" aria-label={t("title")} className="border-t border-hairline py-14 sm:py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <Reveal className="mx-auto w-full max-w-sm sm:max-w-md">
+          <Image
+            src={main.src}
+            alt={t(`items.${main.id}`)}
+            sizes="(min-width: 640px) 448px, 384px"
+            className="h-auto w-full"
+          />
+        </Reveal>
+        <RevealList className="mt-10 grid grid-cols-[1fr_2fr_1fr] items-center gap-4 sm:mt-14 sm:gap-10">
+          {row.map(({ id, src }) => (
+            <RevealItem key={id} className="flex justify-center">
+              <Image
+                src={src}
+                alt={t(`items.${id}`)}
+                sizes="(min-width: 640px) 400px, 50vw"
+                className="h-auto max-h-16 w-auto max-w-full sm:max-h-28"
+              />
             </RevealItem>
           ))}
         </RevealList>

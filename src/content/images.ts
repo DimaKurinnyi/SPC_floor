@@ -31,11 +31,12 @@ import galleryLivingLightGrey from "../../public/images/gallery/living-light-gre
 import galleryOfficeMeetingRoom from "../../public/images/gallery/office-meeting-room.jpg";
 import galleryLivingDarkOak from "../../public/images/gallery/living-dark-oak.jpg";
 
-// Certificate and material-safety badges from laminaut.vercel.app (healthy-home page).
-import certIntertek from "../../public/images/certificate/2381f019-d3e5-4c9a-9249-338e402d50c8-w1600-o-768x398.jpg";
-import certFormaldehydeFree from "../../public/images/certificate/inoar-formaldehyde-free2x-w960-o-768x268.jpg";
+// Certificate and material-safety badges from laminaut.vercel.app (healthy-home page). The PNGs are
+// the original JPGs next to them with the white background cut out, so they sit on the page background.
+import certIntertek from "../../public/images/certificate/intertek.png";
+import certFormaldehydeFree from "../../public/images/certificate/formaldehyde-free.png";
 import certPhthalateFree from "../../public/images/certificate/orthologo-cmyk-w403-o.jpg";
-import certAntibacterial from "../../public/images/certificate/antibacterial-logo-23-2148496587-w626-o-400x400.jpg";
+import certAntibacterial from "../../public/images/certificate/antibacterial.png";
 
 /**
  * A decor swatch. The name is a collection name or decor code, shown as is in every language.
@@ -57,13 +58,18 @@ const gallery = [
   { id: "livingDarkOak", category: "residential", src: galleryLivingDarkOak },
 ] as const satisfies { id: string; category: GalleryCategory; src: StaticImageData }[];
 
-/** Badges in the Certificates section. Captions and alt texts are in `certificates.items.<id>`. */
-const certificates = [
-  { id: "intertek", src: certIntertek },
-  { id: "formaldehydeFree", src: certFormaldehydeFree },
-  { id: "phthalateFree", src: certPhthalateFree },
-  { id: "antibacterial", src: certAntibacterial },
-] as const satisfies { id: string; src: StaticImageData }[];
+/** Badges in the Certificates section: the main certificate on top, the rest in a row below. Alt texts are in `certificates.items.<id>`. */
+const certificates = {
+  main: { id: "intertek", src: certIntertek },
+  row: [
+    { id: "phthalateFree", src: certPhthalateFree },
+    { id: "formaldehydeFree", src: certFormaldehydeFree },
+    { id: "antibacterial", src: certAntibacterial },
+  ],
+} as const satisfies {
+  main: { id: string; src: StaticImageData };
+  row: { id: string; src: StaticImageData }[];
+};
 
 export const images = {
   hero: heroCorridor,
