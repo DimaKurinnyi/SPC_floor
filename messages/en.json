@@ -274,7 +274,8 @@
     "title": "Decors",
     "lead": "Selected patterns from the collection. We will show the full sample set at a meeting, on site or at your office.",
     "cta": "Book a sample presentation",
-    "photoCount": "{count, plural, one {# decor} other {# decors}}"
+    "photoCount": "{count, plural, one {# decor} other {# decors}}",
+    "viewAll": "View all decors ({count})"
   },
   "architects": {
     "title": "Architect and Interior Designer Zone",

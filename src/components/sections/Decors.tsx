@@ -4,7 +4,8 @@ import { useId, useRef, useState, type KeyboardEvent } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
-import { Images } from "lucide-react";
+import { Images, Maximize2 } from "lucide-react";
+import type { CollectionPhoto } from "@/content/collections";
 import { images, type Swatch } from "@/content/images";
 import { Lightbox, type LightboxSlide } from "@/components/ui/Lightbox";
 import { PresentationCta } from "@/components/presentation/PresentationCta";
@@ -16,6 +17,9 @@ type Product = (typeof PRODUCTS)[number];
 // Strips are offset like a real floor, where joints never line up row to row.
 const OFFSETS = ["md:ml-0", "md:ml-[14%]", "md:ml-[5%]", "md:ml-[19%]", "md:ml-[9%]", "md:ml-[2%]", "md:ml-[16%]"];
 
+/** Panel decors shown as strips; the lightbox pages through all of them. */
+const VISIBLE_PANEL_DECORS = 5;
+
 /** Large-format panels get taller strips than planks. */
 const STRIP_HEIGHT: Record<Product, string> = {
   floors: "h-24 sm:h-28",
@@ -23,8 +27,9 @@ const STRIP_HEIGHT: Record<Product, string> = {
 };
 
 /**
- * Real decors of both products as offset strips, one tab per product. A strip whose swatch has
- * collection photos is a button that opens them all in the lightbox.
+ * Real decors of both products as offset strips, one tab per product. Every strip is a button
+ * that opens the lightbox: a floor collection shows all of its decors, and the panels tab shows
+ * its first few decors as strips while the lightbox pages through all of them.
  */
 export function Decors() {
   const t = useTranslations("decors");
@@ -48,10 +53,24 @@ export function Decors() {
     tabRefs.current[next]?.focus();
   };
 
-  const openCollection = (label: string, photos: NonNullable<Swatch["photos"]>) => {
-    setSlides(photos.map(({ code, src }) => ({ src, alt: `${label}, ${code}`, title: code, meta: label })));
-    setViewing(0);
+  const openSlides = (photos: CollectionPhoto[], start: number, meta: string, altFor: (code: string) => string) => {
+    setSlides(photos.map(({ code, src }) => ({ src, alt: altFor(code), title: code, meta })));
+    setViewing(start);
   };
+
+  const panelDecors = images.products.panels.decors;
+  const openPanelDecors = (start: number) =>
+    openSlides(
+      panelDecors,
+      start,
+      tc("products.panels.name"),
+      (code) => `${tc("products.panels.swatchPrefix")} ${code}`,
+    );
+
+  const stripsOf = (product: Product): Swatch[] =>
+    product === "panels"
+      ? panelDecors.slice(0, VISIBLE_PANEL_DECORS).map(({ code, src }) => ({ name: code, src }))
+      : images.products[product].swatches;
 
   return (
     <Section id="decors" title={t("title")} lead={t("lead")} className="pb-10 sm:pb-12">
@@ -97,9 +116,14 @@ export function Decors() {
         >
           {/* Clip the sideways slide-in so it never adds a horizontal scrollbar. */}
           <ul className="grid gap-2 overflow-x-clip">
-            {images.products[product].swatches.map((swatch: Swatch, index) => {
+            {stripsOf(product).map((swatch, index) => {
               const label = `${tc(`products.${product}.swatchPrefix`)} ${swatch.name}`;
               const photos = swatch.photos;
+              const open = photos
+                ? () => openSlides(photos, 0, label, (code) => `${label}, ${code}`)
+                : product === "panels"
+                  ? () => openPanelDecors(index)
+                  : null;
               return (
                 <motion.li
                   key={swatch.name}
@@ -118,16 +142,22 @@ export function Decors() {
                     className="object-cover transition-transform duration-700 ease-out group-has-[button:hover]:scale-[1.03] motion-reduce:transition-none"
                   />
                   <div className="absolute inset-0 bg-linear-to-r from-graphite/85 via-graphite/30 to-transparent" />
-                  {photos ? (
+                  {open ? (
                     <button
                       type="button"
-                      onClick={() => openCollection(label, photos)}
+                      onClick={open}
                       className="absolute inset-0 flex items-center justify-between gap-4 px-6 text-left focus-visible:outline-offset-[-4px]"
                     >
                       <span className="font-display text-lg font-semibold">{label}</span>
                       <span className="inline-flex shrink-0 items-center gap-2 rounded-plank bg-graphite/70 px-3 py-1.5 text-sm text-paper backdrop-blur-sm transition-colors group-has-[button:hover]:text-oak">
-                        <Images aria-hidden className="size-4" strokeWidth={1.75} />
-                        {t("photoCount", { count: photos.length })}
+                        {photos ? (
+                          <>
+                            <Images aria-hidden className="size-4" strokeWidth={1.75} />
+                            {t("photoCount", { count: photos.length })}
+                          </>
+                        ) : (
+                          <Maximize2 aria-hidden className="size-4" strokeWidth={1.75} />
+                        )}
                       </span>
                     </button>
                   ) : (
@@ -139,7 +169,18 @@ export function Decors() {
               );
             })}
           </ul>
-          <p className="mt-6 text-sm text-muted">{tc(`products.${product}.collections`)}</p>
+          {product === "panels" ? (
+            <button
+              type="button"
+              onClick={() => openPanelDecors(0)}
+              className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-paper transition-colors hover:text-oak"
+            >
+              <Images aria-hidden className="size-4 text-oak" strokeWidth={1.75} />
+              {t("viewAll", { count: panelDecors.length })}
+            </button>
+          ) : (
+            <p className="mt-6 text-sm text-muted">{tc(`products.${product}.collections`)}</p>
+          )}
         </div>
       ))}
 

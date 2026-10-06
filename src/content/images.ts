@@ -20,6 +20,22 @@ import panels23138 from "../../public/images/products/panels/23138.jpg";
 import panels23139 from "../../public/images/products/panels/23139.jpg";
 import panels23140 from "../../public/images/products/panels/23140.jpg";
 
+// Every stone-inspired panel decor from the laminaut repo (moderatom-clone/public/assets/stoneInspired).
+import panelDecor0 from "../../public/images/stone-inspired/23033-1.jpg";
+import panelDecor1 from "../../public/images/stone-inspired/23033-2.jpg";
+import panelDecor2 from "../../public/images/stone-inspired/23040-3.jpg";
+import panelDecor3 from "../../public/images/stone-inspired/23047-8.jpg";
+import panelDecor4 from "../../public/images/stone-inspired/23054-2.jpg";
+import panelDecor5 from "../../public/images/stone-inspired/23054-3.jpg";
+import panelDecor6 from "../../public/images/stone-inspired/23054-5.jpg";
+import panelDecor7 from "../../public/images/stone-inspired/23069-9.jpg";
+import panelDecor8 from "../../public/images/stone-inspired/23089-1.jpg";
+import panelDecor9 from "../../public/images/stone-inspired/23137-3.jpg";
+import panelDecor10 from "../../public/images/stone-inspired/23137-6.jpg";
+import panelDecor11 from "../../public/images/stone-inspired/23138-2.jpg";
+import panelDecor12 from "../../public/images/stone-inspired/23139-1.jpg";
+import panelDecor13 from "../../public/images/stone-inspired/23140-1.jpg";
+
 // Gallery: interiors from laminaut.vercel.app, plus CC0 office and showroom photos from Openverse
 // (rawpixel) standing in until there are photos of real projects.
 import galleryLivingGreyOak from "../../public/images/gallery/living-grey-oak.jpg";
@@ -58,6 +74,24 @@ const gallery = [
   { id: "livingDarkOak", category: "residential", src: galleryLivingDarkOak },
 ] as const satisfies { id: string; category: GalleryCategory; src: StaticImageData }[];
 
+/** All panel decors, in code order. Dekory shows the first few and opens the rest in the lightbox. */
+const panelDecors: CollectionPhoto[] = [
+  { code: "23033-1", src: panelDecor0 },
+  { code: "23033-2", src: panelDecor1 },
+  { code: "23040-3", src: panelDecor2 },
+  { code: "23047-8", src: panelDecor3 },
+  { code: "23054-2", src: panelDecor4 },
+  { code: "23054-3", src: panelDecor5 },
+  { code: "23054-5", src: panelDecor6 },
+  { code: "23069-9", src: panelDecor7 },
+  { code: "23089-1", src: panelDecor8 },
+  { code: "23137-3", src: panelDecor9 },
+  { code: "23137-6", src: panelDecor10 },
+  { code: "23138-2", src: panelDecor11 },
+  { code: "23139-1", src: panelDecor12 },
+  { code: "23140-1", src: panelDecor13 },
+];
+
 /** Badges in the Certificates section, in row order. Alt texts are in `certificates.items.<id>`. */
 const certificates = [
   { id: "intertek", src: certIntertek },
@@ -91,6 +125,7 @@ export const images = {
         { name: "23139-1", src: panels23139 },
         { name: "23140-1", src: panels23140 },
       ] satisfies Swatch[],
+      decors: panelDecors,
     },
   },
 };
