@@ -1,5 +1,6 @@
 // Alt texts live in messages/*.json next to the section copy.
 import type { StaticImageData } from "next/image";
+import { collections, type CollectionPhoto } from "./collections";
 
 // Temporary CC0 photo found through Openverse (StockSnap). Replace with a real project photo.
 import heroCorridor from "../../public/images/placeholder/hero-corridor.jpg";
@@ -30,8 +31,11 @@ import galleryLivingLightGrey from "../../public/images/gallery/living-light-gre
 import galleryOfficeMeetingRoom from "../../public/images/gallery/office-meeting-room.jpg";
 import galleryLivingDarkOak from "../../public/images/gallery/living-dark-oak.jpg";
 
-/** A decor swatch. The name is a collection name or decor code, shown as is in every language. */
-export type Swatch = { name: string; src: StaticImageData };
+/**
+ * A decor swatch. The name is a collection name or decor code, shown as is in every language.
+ * Photos, when present, are all the decors of that collection (see src/content/collections.ts).
+ */
+export type Swatch = { name: string; src: StaticImageData; photos?: CollectionPhoto[] };
 
 export type GalleryCategory = "residential" | "office" | "commercial";
 
@@ -54,13 +58,13 @@ export const images = {
     floors: {
       scene: floorsScene,
       swatches: [
-        { name: "Muskoka", src: floorsMuskoka },
-        { name: "Alanya", src: floorsAlanya },
-        { name: "Florence", src: floorsFlorence },
-        { name: "Ontario", src: floorsOntario },
-        { name: "Sofia", src: floorsSofia },
-        { name: "Bursa", src: floorsBursa },
-        { name: "Denver", src: floorsDenver },
+        { name: "Muskoka", src: floorsMuskoka, photos: collections.muskoka },
+        { name: "Alanya", src: floorsAlanya, photos: collections.alanya },
+        { name: "Florence", src: floorsFlorence, photos: collections.florence },
+        { name: "Ontario", src: floorsOntario, photos: collections.ontario },
+        { name: "Sofia", src: floorsSofia, photos: collections.sofia },
+        { name: "Bursa", src: floorsBursa, photos: collections.bursa },
+        { name: "Denver", src: floorsDenver, photos: collections.denver },
       ] satisfies Swatch[],
     },
     panels: {

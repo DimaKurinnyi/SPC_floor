@@ -273,7 +273,8 @@
   "decors": {
     "title": "Dekory",
     "lead": "Wybrane wzory z kolekcji. Pełny wzornik pokażemy na spotkaniu, na budowie lub w Twoim biurze.",
-    "cta": "Umów prezentację wzorników"
+    "cta": "Umów prezentację wzorników",
+    "photoCount": "{count, plural, one {# dekor} few {# dekory} many {# dekorów} other {# dekoru}}"
   },
   "architects": {
     "title": "Strefa Architekta i Projektanta Wnętrz",
