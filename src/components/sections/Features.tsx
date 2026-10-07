@@ -48,7 +48,7 @@ export function Features() {
   const t = useTranslations("features");
 
   return (
-    <Section id="features" title={t("title")} className="pt-0 pb-14 sm:pt-0 sm:pb-20">
+    <Section id="features" title={t("title")} className="pt-0 pb-8 sm:pt-0 sm:pb-10">
       {/* The 1px gap over a hairline background draws the lines between cells. */}
       <RevealList className="grid grid-cols-2 gap-px overflow-hidden rounded-plank border border-hairline bg-hairline lg:grid-cols-4">
         {ITEMS.map(({ key, icon: Icon }) => (
