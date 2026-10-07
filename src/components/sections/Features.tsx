@@ -40,21 +40,23 @@ const ITEMS = [
   { key: "healthy", icon: HeartPulse },
 ] as const;
 
-/** Product properties as a grid of round oak line icons, right under the factory-direct cards. */
+/**
+ * Product properties as a compact spec-sheet grid right under the factory-direct cards: a small
+ * oak line icon beside each caption, cells split by hairlines, four per row (two on phones).
+ */
 export function Features() {
   const t = useTranslations("features");
 
   return (
-    <Section id="features" title={t("title")} className="pt-0 sm:pt-0">
-      <RevealList className="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-12">
+    <Section id="features" title={t("title")} className="pt-0 pb-14 sm:pt-0 sm:pb-20">
+      {/* The 1px gap over a hairline background draws the lines between cells. */}
+      <RevealList className="grid grid-cols-2 gap-px overflow-hidden rounded-plank border border-hairline bg-hairline lg:grid-cols-4">
         {ITEMS.map(({ key, icon: Icon }) => (
-          <RevealItem key={key} className="flex flex-col items-center text-center">
-            <span className="flex size-16 items-center justify-center rounded-full border border-oak/40 bg-graphite-raised text-oak sm:size-20">
-              <Icon aria-hidden className="size-7 sm:size-8" strokeWidth={1.25} />
+          <RevealItem key={key} className="flex items-center gap-3 bg-graphite px-3 py-3 sm:gap-4 sm:px-5 sm:py-4">
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-oak/40 text-oak sm:size-10">
+              <Icon aria-hidden className="size-4.5 sm:size-5" strokeWidth={1.5} />
             </span>
-            <p className="mt-4 max-w-48 text-sm leading-snug font-medium text-balance sm:text-base">
-              {t(`items.${key}`)}
-            </p>
+            <p className="text-xs leading-snug font-medium text-pretty sm:text-sm">{t(`items.${key}`)}</p>
           </RevealItem>
         ))}
       </RevealList>
