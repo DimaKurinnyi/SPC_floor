@@ -7,7 +7,7 @@ export function Gallery() {
   const t = useTranslations("gallery");
 
   return (
-    <Section id="gallery" title={t("title")} lead={t("lead")}>
+    <Section id="gallery" title={t("title")} lead={t("lead")} className="pb-8 sm:pb-10">
       <GalleryGrid
         photos={images.gallery.map(({ id, src, category }) => ({
           id,

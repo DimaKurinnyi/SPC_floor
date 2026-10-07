@@ -73,7 +73,7 @@ export function Decors() {
       : images.products[product].swatches;
 
   return (
-    <Section id="decors" title={t("title")} lead={t("lead")} className="pb-10 sm:pb-12">
+    <Section id="decors" title={t("title")} lead={t("lead")} className="pt-8 pb-10 sm:pt-10 sm:pb-12">
       <div
         role="tablist"
         aria-label={t("title")}
