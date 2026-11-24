@@ -308,6 +308,31 @@
     },
     "cta": "Skontaktuj się w Sprawie Współpracy B2B"
   },
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "items": {
+      "moq": {
+        "question": "Jaka jest minimalna wielkość zamówienia (MOQ)?",
+        "answer": "Realizujemy zamówienia obiektowe już od 4 palet (ok. 400–480 m², w zależności od wybranej kolekcji). Dostarczamy zarówno mniejsze partie drobnicowe (LTL), jak i pełne transporty całopojazdowe (FTL – ok. 20–22 palety) bezpośrednio z fabryki."
+      },
+      "delivery": {
+        "question": "Jaki jest czas realizacji i jak wygląda dostawa na budowę?",
+        "answer": "Standardowy czas realizacji zamówienia wraz z produkcją, odprawą celną i transportem pod wskazany adres w Polsce wynosi 3–5 tygodni. Dostarczamy towar bezpośrednio na plac budowy lub do magazynu inwestora. Ze względu na wagę palet (ok. 1 000–1 250 kg/paleta) rozładunek po stronie odbiorcy wymaga wózka widłowego lub wcześniejszego uzgodnienia auta z windą."
+      },
+      "samples": {
+        "question": "Czy można otrzymać fizyczne próbki (wzorniki) przed złożeniem zamówienia?",
+        "answer": "Tak. Wzorniki oraz próbniki dekorów prezentujemy bezpośrednio podczas spotkania w Państwa biurze lub na budowie. Istnieje również możliwość wysyłki próbek kurierem po wstępnym potwierdzeniu parametrów projektu (metraż, lokalizacja, planowany termin)."
+      },
+      "documents": {
+        "question": "Czy panele posiadają dokumentację wymaganą do odbiorów obiektowych?",
+        "answer": "Tak, wszystkie oferowane produkty posiadają komplet dokumentów wymaganych na rynku UE: oznakowanie CE, Deklarację Właściwości Użytkowych (DoP), klasyfikację ogniową Bfl‑s1, certyfikat Intertek Clean Air Gold oraz pełną dokumentację do stosowania na ogrzewaniu podłogowym."
+      },
+      "factoryBatch": {
+        "question": "Dlaczego warto zamówić całą partię na obiekt bezpośrednio z fabryki?",
+        "answer": "Przy zamówieniach obiektowych cała ilość materiału produkowana jest w ramach jednej serii produkcyjnej (gwarancja Co-lot Match). Eliminuje to ryzyko różnic w odcieniach między paczkami, które często zdarza się przy domawianiu towaru z lokalnych stanów magazynowych."
+      }
+    }
+  },
   "certificates": {
     "title": "Certyfikaty i bezpieczeństwo",
     "items": {

@@ -308,6 +308,31 @@
     },
     "cta": "Contact Us About B2B Partnership"
   },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "moq": {
+        "question": "What is the minimum order quantity (MOQ)?",
+        "answer": "We take project orders from 4 pallets (about 400–480 m², depending on the collection). We deliver both smaller part loads (LTL) and full truckloads (FTL, about 20–22 pallets) straight from the factory."
+      },
+      "delivery": {
+        "question": "How long does an order take and how is it delivered to site?",
+        "answer": "The standard lead time, including production, customs clearance and transport to your address in Poland, is 3–5 weeks. We deliver straight to the construction site or the investor's warehouse. Pallets weigh about 1,000–1,250 kg each, so unloading on the recipient's side needs a forklift or a truck with a tail lift arranged in advance."
+      },
+      "samples": {
+        "question": "Can I get physical samples before ordering?",
+        "answer": "Yes. We present sample boards and decor samples in person at your office or on site. We can also send samples by courier once the project details are confirmed (area, location, planned date)."
+      },
+      "documents": {
+        "question": "Do the panels come with the documents needed for project handover?",
+        "answer": "Yes. All our products come with the full set of documents required in the EU: CE marking, a Declaration of Performance (DoP), Bfl‑s1 fire classification, Intertek Clean Air Gold certification and full documentation for use over underfloor heating."
+      },
+      "factoryBatch": {
+        "question": "Why order the whole project batch straight from the factory?",
+        "answer": "For project orders, the whole quantity is made in a single production run (Co-lot Match guarantee). This removes the risk of shade differences between boxes, which often happens when stock is topped up from local warehouses."
+      }
+    }
+  },
   "certificates": {
     "title": "Certificates and Safety",
     "items": {

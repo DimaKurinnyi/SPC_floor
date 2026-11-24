@@ -4,6 +4,7 @@ import { Certificates } from "@/components/sections/Certificates";
 import { Contact } from "@/components/sections/Contact";
 import { Decors } from "@/components/sections/Decors";
 import { FactoryDirect } from "@/components/sections/FactoryDirect";
+import { Faq } from "@/components/sections/Faq";
 import { Features } from "@/components/sections/Features";
 import { Gallery } from "@/components/sections/Gallery";
 import { Hero } from "@/components/sections/Hero";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <ArchitectZone />
       <Process />
       <Contact />
+      <Faq />
       <Certificates />
     </>
   );
