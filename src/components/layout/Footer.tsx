@@ -35,26 +35,32 @@ export function Footer() {
           <h2 className="font-display font-semibold">{t("company")}</h2>
           <p className="mt-4 text-muted">{company.legalName}</p>
           <dl className="mt-2 grid gap-2 text-muted">
-            <div className="flex gap-2">
-              <dt>KRS</dt>
-              <dd>{company.krs}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt>NIP</dt>
-              <dd>{company.nip}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt>REGON</dt>
-              <dd>{company.regon}</dd>
-            </div>
-            <div>
-              <dt>{t("court")}</dt>
-              <dd>{company.court}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt>{t("shareCapital")}</dt>
-              <dd>{company.shareCapital}</dd>
-            </div>
+            {/* Details still unknown are null in company.ts and simply left out. */}
+            {[
+              { label: "KRS", value: company.krs },
+              { label: "NIP", value: company.nip },
+              { label: "REGON", value: company.regon },
+              { label: t("bdo"), value: company.bdo },
+            ].map(({ label, value }) =>
+              value ? (
+                <div key={label} className="flex gap-2">
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ) : null,
+            )}
+            {company.court ? (
+              <div>
+                <dt>{t("court")}</dt>
+                <dd>{company.court}</dd>
+              </div>
+            ) : null}
+            {company.shareCapital ? (
+              <div className="flex gap-2">
+                <dt>{t("shareCapital")}</dt>
+                <dd>{company.shareCapital}</dd>
+              </div>
+            ) : null}
           </dl>
         </div>
       </div>

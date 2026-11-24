@@ -448,8 +448,9 @@
     "company": "Dane firmy",
     "court": "Sąd rejestrowy",
     "shareCapital": "Kapitał zakładowy",
+    "bdo": "Nr BDO",
     "privacy": "Polityka Prywatności",
-    "rights": "© {year} {name}. Wszelkie prawa zastrzeżone."
+    "rights": "© {year} {name} · Wszelkie prawa zastrzeżone."
   },
   "privacy": {
     "title": "Polityka Prywatności",
