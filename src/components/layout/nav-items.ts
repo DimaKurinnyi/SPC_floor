@@ -5,6 +5,7 @@ export const NAV_ITEMS = [
   { key: "decors", hash: "decors" },
   { key: "architects", hash: "architects" },
   { key: "process", hash: "process" },
+  { key: "faq", hash: "faq" },
 ] as const;
 
 /** Section ids the nav highlights while they are on screen. Module-level, so hooks get a stable array. */
