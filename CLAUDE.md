@@ -16,6 +16,7 @@ Stack: Next.js 16 (App Router, Turbopack), React 19, Tailwind CSS 4, next-intl 4
 - `npm run build`: production build. Both locales must show as `●` (SSG) in the route table
 - `npm run lint`: ESLint, including the React Compiler rules (`react-hooks/refs`, `incompatible-library`)
 - `npx tsc --noEmit`: type check, including typed translation keys
+- `npm run docs:pdf`: rebuild the technical data sheet PDF (see below)
 
 There is no test runner. Verify changes with lint, build and the running app.
 
@@ -42,6 +43,8 @@ Copy `.env.example` to `.env.local`. Without the Resend variables the form still
 **Certificates.** `Certificates.tsx` (`#certificates`, the last section, under the contact form) shows the badges in `images.certificates` with no visible heading: one row of same-size boxes (two by two on phones), each badge scaled to fit, straight on the page background. Their PNGs are the original JPGs in `public/images/certificate/` with the white background cut out by `scripts/cutout-white.mjs`; `certificates.title` is its `aria-label` and `certificates.items.<id>` the alt texts. The page order is set in `src/app/[locale]/page.tsx`: …, Process, Contact, Faq, Certificates.
 
 **FAQ.** `Faq.tsx` (`#faq`, under the contact form, above the certificates, last item in the header nav) lists the questions in `faq.items.<key>` (order set by `ITEMS`) as native `<details>` elements, and emits `FAQPage` JSON-LD built from the same copy, so the structured data always matches the page.
+
+**Technical data sheet (PDF).** `public/docs/karta-techniczna-spc.pdf` (A4, two pages, Polish) is linked from a download button in the architect zone. Its source is `documents/karta-techniczna/karta-techniczna.html` (with vendored Inter and Montserrat fonts), and `npm run docs:pdf` (`scripts/build-pdf.mjs`) fills in the company details from `company.ts` and prints it with headless Chromium via `playwright-core` (set `CHROMIUM_PATH` to a local Chrome or Chromium if Playwright has no browser installed). Rebuild and commit the PDF after changing the template, the company data or `NEXT_PUBLIC_SITE_URL` (the website line appears once it is a real domain); the BDO line appears once `company.bdo` is set.
 
 **Lightbox.** `src/components/ui/Lightbox.tsx` is the full-screen photo viewer used by the gallery and by each catalog product (its main photo opens the interior shot plus all decors). It is a native `<dialog>` driven by a controlled `index: number | null`. Navigation works by swipe or drag (motion `drag="x"`), arrow keys, side buttons and a thumbnail strip. Photos are never enlarged past their file width, so the small decor strips stay sharp. Its strings are under `lightbox.*`.
 

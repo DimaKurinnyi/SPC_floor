@@ -1,7 +1,11 @@
 import { useTranslations } from "next-intl";
-import { Briefcase, ClipboardList, Handshake } from "lucide-react";
+import { Briefcase, ClipboardList, Download, Handshake } from "lucide-react";
 import { LeadCta } from "@/components/lead-form/LeadCta";
 import { Reveal, RevealItem, RevealList } from "@/components/ui/Reveal";
+import { buttonClasses } from "@/components/ui/button-styles";
+
+/** Built from documents/karta-techniczna by `npm run docs:pdf`. */
+const DATA_SHEET_PDF = "/docs/karta-techniczna-spc.pdf";
 
 const ITEMS = [
   { key: "commission", icon: Handshake },
@@ -43,11 +47,16 @@ export function ArchitectZone() {
             ))}
           </RevealList>
 
-          <Reveal>
+          <Reveal className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             {/* Opens the form with "Biuro Projektowe" already chosen as the investment type. */}
-            <LeadCta investmentType="designOffice" className="mt-10">
-              {t("cta")}
-            </LeadCta>
+            <LeadCta investmentType="designOffice">{t("cta")}</LeadCta>
+            {/* A static file, not a page, so a plain link rather than the localized Link. */}
+            <a href={DATA_SHEET_PDF} download className={buttonClasses("secondary")}>
+              <Download aria-hidden className="size-4 shrink-0 text-oak" strokeWidth={1.75} />
+              <span>
+                {t("download.label")} <span className="font-normal text-muted">{t("download.meta")}</span>
+              </span>
+            </a>
           </Reveal>
         </div>
       </div>

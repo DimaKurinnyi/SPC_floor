@@ -1,0 +1,591 @@
+<!doctype html>
+<!--
+  Source of public/docs/karta-techniczna-spc.pdf. Build with `npm run docs:pdf`.
+  Double-brace placeholders are filled from src/content/company.ts by scripts/build-pdf.mjs, and a block
+  wrapped in "if:name" and "/if:name" comments is dropped when that value is empty.
+-->
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Karta Techniczna i Specyfikacja Logistyczna — Podłogi i Panele SPC</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      :root {
+        --graphite: #1a1a1a;
+        --ink: #1f1f1f;
+        --muted: #5a5d61;
+        --bronze: #8a5a2c;
+        --oak: #d4a373;
+        --amber: #d4af37;
+        --hairline: #e4e0d8;
+        --tint: #f6f3ee;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.5;
+        color: var(--ink);
+        background: #fff;
+      }
+      .page {
+        position: relative;
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+        page-break-after: always;
+        break-after: page;
+      }
+      .page:last-child {
+        page-break-after: auto;
+        break-after: auto;
+      }
+      .content {
+        padding: 0 16mm;
+      }
+      h1,
+      h2,
+      .display {
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: -0.01em;
+      }
+
+      /* Header band */
+      .band {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10mm;
+        padding: 9mm 16mm;
+        background: var(--graphite);
+        color: #f8f9fa;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+      }
+      .brand svg {
+        width: 13mm;
+        height: auto;
+        color: var(--oak);
+      }
+      .brand .name {
+        font-family: "Montserrat", sans-serif;
+        font-size: 17pt;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+      .brand .legal {
+        margin-top: 1mm;
+        font-size: 8.5pt;
+        color: #b8b8b8;
+      }
+      .contacts {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 4mm;
+        row-gap: 0.6mm;
+        font-size: 8.2pt;
+        color: #e6e6e6;
+      }
+      .contacts dt {
+        color: var(--oak);
+        font-weight: 500;
+      }
+      .band-rule {
+        height: 1.2mm;
+        background: linear-gradient(90deg, var(--amber), var(--oak));
+      }
+
+      /* Title */
+      .title {
+        padding: 9mm 16mm 6mm;
+      }
+      .overline {
+        font-size: 8pt;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--bronze);
+      }
+      h1 {
+        margin-top: 2.5mm;
+        font-size: 21pt;
+        font-weight: 700;
+        line-height: 1.15;
+      }
+      .subtitle {
+        margin-top: 1.5mm;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12.5pt;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      /* Sections */
+      section {
+        margin-top: 6mm;
+      }
+      h2 {
+        display: flex;
+        align-items: baseline;
+        gap: 3mm;
+        padding-bottom: 2mm;
+        border-bottom: 0.4mm solid var(--graphite);
+        font-size: 12.5pt;
+        font-weight: 700;
+      }
+      h2 .num {
+        font-size: 10pt;
+        color: var(--bronze);
+      }
+
+      /* Layer diagram */
+      .layers {
+        display: grid;
+        grid-template-columns: 78mm 1fr;
+        gap: 6mm;
+        align-items: center;
+        margin-top: 4mm;
+      }
+      .layers svg {
+        width: 100%;
+        height: auto;
+      }
+      .layers ol {
+        list-style: none;
+        display: grid;
+        gap: 2.6mm;
+      }
+      .layers li {
+        display: grid;
+        grid-template-columns: 7mm 1fr;
+        gap: 2mm;
+        align-items: start;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 6mm;
+        height: 6mm;
+        border-radius: 50%;
+        background: var(--graphite);
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-size: 8pt;
+        font-weight: 700;
+      }
+      .layers strong {
+        display: block;
+        font-weight: 600;
+      }
+      .layers span.desc {
+        color: var(--muted);
+        font-size: 8.8pt;
+      }
+
+      /* Tables */
+      table {
+        width: 100%;
+        margin-top: 3mm;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 2.2mm 3mm;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 0.25mm solid var(--hairline);
+      }
+      thead th {
+        background: var(--tint);
+        font-size: 8pt;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border-bottom: 0.3mm solid #cfc9bf;
+      }
+      tbody th {
+        width: 52mm;
+        font-weight: 600;
+      }
+      .note {
+        display: block;
+        margin-top: 0.4mm;
+        color: var(--muted);
+        font-size: 8.5pt;
+        font-weight: 400;
+      }
+      .nowrap {
+        white-space: nowrap;
+      }
+
+      /* Callouts */
+      .terms {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm;
+        margin-top: 4mm;
+      }
+      .card {
+        padding: 4mm 5mm;
+        border: 0.25mm solid var(--hairline);
+        border-left: 1mm solid var(--oak);
+        background: var(--tint);
+      }
+      .card .label {
+        font-size: 7.8pt;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--bronze);
+      }
+      .card .value {
+        margin-top: 1mm;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12pt;
+        font-weight: 700;
+      }
+      .card p {
+        margin-top: 1mm;
+        color: var(--muted);
+        font-size: 8.8pt;
+      }
+      ul.docs {
+        margin-top: 3mm;
+        padding-left: 4.5mm;
+        display: grid;
+        gap: 1.4mm;
+      }
+      ul.docs li::marker {
+        color: var(--oak);
+      }
+      .cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 6mm;
+        margin-top: 7mm;
+        padding: 5mm 6mm;
+        background: var(--graphite);
+        color: #f8f9fa;
+      }
+      .cta .display {
+        font-size: 11.5pt;
+        font-weight: 700;
+      }
+      .cta p {
+        margin-top: 0.8mm;
+        color: #c8c8c8;
+        font-size: 8.6pt;
+      }
+      .cta .contact {
+        text-align: right;
+        font-size: 9pt;
+        line-height: 1.6;
+        white-space: nowrap;
+      }
+      .cta .contact b {
+        color: var(--amber);
+      }
+      .disclaimer {
+        margin-top: 5mm;
+        color: var(--muted);
+        font-size: 7.6pt;
+        line-height: 1.45;
+      }
+
+      /* Footer on every page */
+      footer {
+        position: absolute;
+        left: 16mm;
+        right: 16mm;
+        bottom: 9mm;
+        display: flex;
+        justify-content: space-between;
+        gap: 6mm;
+        padding-top: 2.5mm;
+        border-top: 0.25mm solid var(--hairline);
+        color: var(--muted);
+        font-size: 7.4pt;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page 1 -->
+    <div class="page">
+      <header class="band">
+        <div class="brand">
+          <svg viewBox="0 0 28 22" fill="currentColor" aria-hidden="true">
+            <rect x="0" y="0" width="20" height="6" rx="1" />
+            <rect x="8" y="8" width="20" height="6" rx="1" opacity="0.75" />
+            <rect x="3" y="16" width="20" height="6" rx="1" opacity="0.5" />
+          </svg>
+          <div>
+            <div class="name">{{brand}}</div>
+            <div class="legal">{{legalName}}</div>
+          </div>
+        </div>
+        <dl class="contacts">
+          <dt>Tel.</dt>
+          <dd>{{phone}}</dd>
+          <dt>E-mail</dt>
+          <dd>{{email}}</dd>
+          <!--if:website-->
+          <dt>WWW</dt>
+          <dd>{{website}}</dd>
+          <!--/if:website-->
+          <dt>NIP</dt>
+          <dd>{{nip}}</dd>
+          <!--if:bdo-->
+          <dt>BDO</dt>
+          <dd>{{bdo}}</dd>
+          <!--/if:bdo-->
+        </dl>
+      </header>
+      <div class="band-rule"></div>
+
+      <div class="title">
+        <p class="overline">Karta techniczna · Wydanie {{issued}}</p>
+        <h1>Karta Techniczna i Specyfikacja Logistyczna</h1>
+        <p class="subtitle">Podłogi i Panele SPC</p>
+      </div>
+
+      <div class="content">
+        <section>
+          <h2><span class="num">01</span> Budowa panelu</h2>
+          <div class="layers">
+            <!-- Exploded view of the five layers, top to bottom, numbered as in the list beside it. -->
+            <svg viewBox="0 64 300 186" aria-hidden="true">
+              <defs>
+                <pattern id="wood" width="60" height="12" patternUnits="userSpaceOnUse">
+                  <rect width="60" height="12" fill="#c8955e" />
+                  <path d="M0 3H60M0 8H34M40 10H60" stroke="#a87545" stroke-width="0.8" opacity="0.6" />
+                </pattern>
+                <pattern id="core" width="8" height="8" patternUnits="userSpaceOnUse">
+                  <rect width="8" height="8" fill="#a9a59d" />
+                  <circle cx="2" cy="3" r="0.7" fill="#8f8b83" />
+                  <circle cx="6" cy="6" r="0.6" fill="#8f8b83" />
+                </pattern>
+                <pattern id="foam" width="5" height="5" patternUnits="userSpaceOnUse">
+                  <rect width="5" height="5" fill="#5a5f64" />
+                  <circle cx="2.5" cy="2.5" r="0.7" fill="#6c7277" />
+                </pattern>
+              </defs>
+              <!-- Each slab: top face, front face, right side. x0 = 18, width 180, depth (70, -42). -->
+              <!-- 5 underlay, top y 230, thickness 10 -->
+              <g>
+                <polygon points="18,230 198,230 268,188 88,188" fill="url(#foam)" />
+                <rect x="18" y="230" width="180" height="10" fill="#464b50" />
+                <polygon points="198,230 268,188 268,198 198,240" fill="#3a3e42" />
+              </g>
+              <!-- 4 core, top y 186, thickness 24 -->
+              <g>
+                <polygon points="18,186 198,186 268,144 88,144" fill="url(#core)" />
+                <rect x="18" y="186" width="180" height="24" fill="#8a877f" />
+                <polygon points="198,186 268,144 268,168 198,210" fill="#76736c" />
+              </g>
+              <!-- 3 decor, top y 164, thickness 5 -->
+              <g>
+                <polygon points="18,164 198,164 268,122 88,122" fill="url(#wood)" />
+                <rect x="18" y="164" width="180" height="5" fill="#9c6b3f" />
+                <polygon points="198,164 268,122 268,127 198,169" fill="#87592f" />
+              </g>
+              <!-- 2 wear layer, top y 142, thickness 4 -->
+              <g stroke="#b5afa4" stroke-width="0.6">
+                <polygon points="18,142 198,142 268,100 88,100" fill="#ece8e1" fill-opacity="0.55" />
+                <rect x="18" y="142" width="180" height="4" fill="#d9d4cb" />
+                <polygon points="198,142 268,100 268,104 198,146" fill="#cfc9be" />
+              </g>
+              <!-- 1 Ultimate Shield coating, top y 122, thickness 2 -->
+              <g stroke="#8fb3c6" stroke-width="0.6">
+                <polygon points="18,122 198,122 268,80 88,80" fill="#dbe9f0" fill-opacity="0.6" />
+                <rect x="18" y="122" width="180" height="2" fill="#bcd5e2" />
+                <polygon points="198,122 268,80 268,82 198,124" fill="#aac8d8" />
+              </g>
+              <!-- Numbered markers on the right edge of each layer -->
+              <g font-family="Montserrat, sans-serif" font-size="9" font-weight="700" text-anchor="middle">
+                <g><line x1="268" y1="81" x2="282" y2="81" stroke="#d4a373" /><circle cx="289" cy="81" r="7" fill="#1a1a1a" /><text x="289" y="84.2" fill="#fff">1</text></g>
+                <g><line x1="268" y1="102" x2="282" y2="102" stroke="#d4a373" /><circle cx="289" cy="102" r="7" fill="#1a1a1a" /><text x="289" y="105.2" fill="#fff">2</text></g>
+                <g><line x1="268" y1="125" x2="282" y2="125" stroke="#d4a373" /><circle cx="289" cy="125" r="7" fill="#1a1a1a" /><text x="289" y="128.2" fill="#fff">3</text></g>
+                <g><line x1="268" y1="156" x2="282" y2="156" stroke="#d4a373" /><circle cx="289" cy="156" r="7" fill="#1a1a1a" /><text x="289" y="159.2" fill="#fff">4</text></g>
+                <g><line x1="268" y1="193" x2="282" y2="193" stroke="#d4a373" /><circle cx="289" cy="193" r="7" fill="#1a1a1a" /><text x="289" y="196.2" fill="#fff">5</text></g>
+              </g>
+            </svg>
+            <ol>
+              <li>
+                <span class="badge">1</span>
+                <div><strong>Powłoka Ultimate Shield</strong><span class="desc">Ochrona przed zarysowaniami i plamami.</span></div>
+              </li>
+              <li>
+                <span class="badge">2</span>
+                <div><strong>Warstwa ścieralna 0,55 mm lub 0,30 mm</strong><span class="desc">Przezroczysta warstwa ochronna klasy obiektowej.</span></div>
+              </li>
+              <li>
+                <span class="badge">3</span>
+                <div><strong>Dekor HD</strong><span class="desc">Realistyczny wzór drewna lub kamienia.</span></div>
+              </li>
+              <li>
+                <span class="badge">4</span>
+                <div><strong>Sztywny rdzeń SPC 2000 kg/m³</strong><span class="desc">Wodoodporny rdzeń mineralno-polimerowy.</span></div>
+              </li>
+              <li>
+                <span class="badge">5</span>
+                <div><strong>Zintegrowany podkład IXPE 1,0 lub 1,5 mm</strong><span class="desc">Wbudowana izolacja akustyczna.</span></div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section>
+          <h2><span class="num">02</span> Parametry techniczne i zgodność z normami UE</h2>
+          <table>
+            <tbody>
+              <tr>
+                <th>Klasa użyteczności</th>
+                <td>23 / 33 / 42<span class="note">Obiekty mieszkalne i komercyjne (EN ISO 10874).</span></td>
+              </tr>
+              <tr>
+                <th>Klasa reakcji na ogień</th>
+                <td>B<sub>fl</sub>‑s1 <span class="note">Wg EN 13501-1.</span></td>
+              </tr>
+              <tr>
+                <th>Antypoślizgowość</th>
+                <td>R10 / DS</td>
+              </tr>
+              <tr>
+                <th>Ogrzewanie podłogowe</th>
+                <td>Tak<span class="note">Niski opór cieplny; temperatura powierzchni maks. +27 °C.</span></td>
+              </tr>
+              <tr>
+                <th>Wodoodporność</th>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <th>System zamków</th>
+                <td>I4F / Uniclic</td>
+              </tr>
+              <tr>
+                <th>Certyfikacja i ekologia</th>
+                <td>
+                  Oznakowanie CE, Deklaracja Właściwości Użytkowych (DoP), Intertek Clean Air Gold
+                  <span class="note">Zgodność z rozporządzeniem UE w sprawie opakowań PPWR (UE) 2025/40.</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <footer>
+        <span>{{legalName}} · {{address}} · KRS {{krs}} · NIP {{nip}}</span>
+        <span class="nowrap">Strona 1 z 2</span>
+      </footer>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+      <div class="content" style="padding-top: 14mm">
+        <section style="margin-top: 0">
+          <h2><span class="num">03</span> Formaty i pakowanie</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Produkt</th>
+                <th>Formaty</th>
+                <th>Grubość</th>
+                <th>Na palecie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Panele drewnopodobne<span class="note">Podłogi SPC, system click</span></th>
+                <td class="nowrap">181 × 1219 mm<br />229 × 1219 mm<br />229 × 1493 mm</td>
+                <td class="nowrap">4–7 mm</td>
+                <td class="nowrap">98,5–121,6 m²<span class="note">zależnie od formatu</span></td>
+              </tr>
+              <tr>
+                <th>Panele wielkoformatowe<span class="note">Wzór kamienia / betonu</span></th>
+                <td class="nowrap">305 × 915 mm</td>
+                <td class="nowrap">5–7 mm</td>
+                <td class="nowrap">116 m²</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2><span class="num">04</span> Warunki dostaw</h2>
+          <div class="terms">
+            <div class="card">
+              <div class="label">Minimum logistyczne</div>
+              <div class="value">od 4 palet</div>
+              <p>ok. 400–480 m², zależnie od kolekcji. Transport drobnicowy (LTL) lub całopojazdowy (FTL, ok. 20–22 palety).</p>
+            </div>
+            <div class="card">
+              <div class="label">Czas realizacji</div>
+              <div class="value">3–5 tygodni</div>
+              <p>Dostawa bezpośrednio na budowę w całej Polsce, wraz z produkcją i odprawą celną.</p>
+            </div>
+          </div>
+          <p style="margin-top: 3mm; color: var(--muted); font-size: 8.8pt">
+            Paleta waży ok. 1&nbsp;000–1&nbsp;250&nbsp;kg: rozładunek po stronie odbiorcy wymaga wózka widłowego lub
+            wcześniejszego uzgodnienia auta z windą. Cała partia na obiekt pochodzi z jednej serii produkcyjnej
+            (Co-lot Match), bez różnic w odcieniach między paczkami.
+          </p>
+        </section>
+
+        <section>
+          <h2><span class="num">05</span> Dokumentacja dla projektantów i inwestorów</h2>
+          <ul class="docs">
+            <li>Deklaracja Właściwości Użytkowych (DoP) i oznakowanie CE dla wybranej kolekcji.</li>
+            <li>Klasyfikacja reakcji na ogień B<sub>fl</sub>‑s1 oraz certyfikat Intertek Clean Air Gold.</li>
+            <li>Dokumentacja do stosowania na ogrzewaniu podłogowym.</li>
+            <li>Fizyczne wzorniki dekorów: prezentacja w biurze lub na budowie albo wysyłka kurierem.</li>
+          </ul>
+          <p style="margin-top: 2.5mm; color: var(--muted); font-size: 8.8pt">
+            Dokumenty dla konkretnej kolekcji przesyłamy na życzenie, razem z ofertą na projekt.
+          </p>
+        </section>
+
+        <div class="cta">
+          <div>
+            <div class="display">Wycena hurtowa na obiekt w 24 godziny</div>
+            <p>Podaj metraż, typ inwestycji i lokalizację: przygotujemy ofertę i umówimy prezentację wzorników.</p>
+          </div>
+          <div class="contact">
+            <b>{{phone}}</b><br />
+            {{email}}
+            <!--if:website--><br />{{website}}<!--/if:website-->
+          </div>
+        </div>
+
+        <p class="disclaimer">
+          Dane mają charakter informacyjny i nie stanowią oferty w rozumieniu art. 66 Kodeksu cywilnego.
+          Wiążące parametry poszczególnych kolekcji podaje Deklaracja Właściwości Użytkowych (DoP). Producent
+          zastrzega sobie prawo do zmian technicznych.
+        </p>
+      </div>
+
+      <footer>
+        <span>{{legalName}} · {{address}} · KRS {{krs}} · NIP {{nip}}</span>
+        <span class="nowrap">Strona 2 z 2</span>
+      </footer>
+    </div>
+  </body>
+</html>

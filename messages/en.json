@@ -307,7 +307,11 @@
       "support": "<b>Full technical support:</b> Technical Data Sheets (TDS), Declarations of Performance (DoP), hygiene certificates.",
       "presentation": "<b>Personal sample presentation:</b> We will come to a meeting with you or your client and present physical decor samples."
     },
-    "cta": "Contact Us About B2B Partnership"
+    "cta": "Contact Us About B2B Partnership",
+    "download": {
+      "label": "Download the technical data sheet",
+      "meta": "(PDF, Polish)"
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",

@@ -307,7 +307,11 @@
       "support": "<b>Pełne wsparcie techniczne:</b> Karty Techniczne (TDS), Deklaracje Właściwości Użytkowych (DoP), atesty higieniczne.",
       "presentation": "<b>Osobista prezentacja wzorników:</b> Przyjedziemy na spotkanie z Tobą lub Twoim klientem i zaprezentujemy fizyczne próbki dekorów."
     },
-    "cta": "Skontaktuj się w Sprawie Współpracy B2B"
+    "cta": "Skontaktuj się w Sprawie Współpracy B2B",
+    "download": {
+      "label": "Pobierz Kartę Techniczną",
+      "meta": "(PDF)"
+    }
   },
   "faq": {
     "title": "Najczęściej zadawane pytania",
