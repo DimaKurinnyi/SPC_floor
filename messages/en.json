@@ -94,7 +94,7 @@
           },
           "sizes": {
             "label": "Plank sizes",
-            "value": "181 × 1219 mm, 229 × 1219 mm, 229 × 1524 mm"
+            "value": "181 × 1219 mm, 229 × 1219 mm, 229 × 1493 mm"
           },
           "edges": {
             "label": "Edges",
@@ -110,7 +110,7 @@
           },
           "pack": {
             "label": "Packaging",
-            "value": "10 pcs / 2.21 m², 55 cartons per pallet (121.6 m²)"
+            "value": "10 pcs / 2.21 m², 48–55 cartons per pallet (98.5–121.6 m²)"
           },
           "warranty": {
             "label": "Warranty",
